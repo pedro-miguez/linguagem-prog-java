@@ -54,13 +54,24 @@ public class Empregado {
         this.horaSaida = horaSaida;
     }
 
-    private double calcularHorasSemanais() {
+    public double calcularHorasSemanais() {
         int difference = getHoraEntrada().diferencaEmSegundos(getHoraSaida());
 
-        return (double)difference / 60 * 5;
+        return (double)difference / 3600 * 5;
     }
 
-    private int calcularDiasContratado() {
+    public int calcularDiasContratado() {
         return getDataContrato().diferenca(Data.dataAtual());
+    }
+
+    @Override
+    public String toString() {
+        return "Empregado{" +
+                "primeiroNome=' " + primeiroNome + '\'' +
+                ", ultimoNome=' " + ultimoNome + '\'' +
+                ", dataContrato= " + dataContrato +
+                ", horaEntrada= " + horaEntrada +
+                ", horaSaida= " + horaSaida +
+                '}';
     }
 }
