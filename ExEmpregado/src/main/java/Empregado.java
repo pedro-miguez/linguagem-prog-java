@@ -53,4 +53,14 @@ public class Empregado {
     public void setHoraSaida(Tempo horaSaida) {
         this.horaSaida = horaSaida;
     }
+
+    private double calcularHorasSemanais() {
+        int difference = getHoraEntrada().diferencaEmSegundos(getHoraSaida());
+
+        return (double)difference / 60 * 5;
+    }
+
+    private int calcularDiasContratado() {
+        return getDataContrato().diferenca(Data.dataAtual());
+    }
 }
