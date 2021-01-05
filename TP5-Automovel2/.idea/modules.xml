@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Biblioteca/Biblioteca.iml" filepath="$PROJECT_DIR$/Biblioteca/Biblioteca.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/TP5-Automovel2.iml" filepath="$PROJECT_DIR$/.idea/TP5-Automovel2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TP5-AutomovelComMatricula/TP5-AutomovelComMatricula.iml" filepath="$PROJECT_DIR$/TP5-AutomovelComMatricula/TP5-AutomovelComMatricula.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TP5-AutomovelComProprietario/TP5-AutomovelComProprietario.iml" filepath="$PROJECT_DIR$/TP5-AutomovelComProprietario/TP5-AutomovelComProprietario.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Biblioteca" />
+        <module name="TP5-AutomovelComMatricula" />
+        <module name="TP5-AutomovelComProprietario" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Biblioteca" target="1.8" />
+      <module name="TP5-AutomovelComMatricula" target="1.8" />
+      <module name="TP5-AutomovelComProprietario" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
