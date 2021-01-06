@@ -83,15 +83,11 @@ public class Game {
             answer = scn.nextInt();
         } while (answer < 1 || answer > 3);
 
-        switch (answer) {
-            case 1:
-                return Signals.ROCK;
-            case 2:
-                return Signals.PAPER;
-            case 3:
-                return Signals.SCISSOR;
-            default:
-                throw new IllegalArgumentException("Invalid input");
-        }
+        return switch (answer) {
+            case 1 -> Signals.ROCK;
+            case 2 -> Signals.PAPER;
+            case 3 -> Signals.SCISSOR;
+            default -> throw new IllegalStateException("Unexpected value: " + answer);
+        };
     }
 }
