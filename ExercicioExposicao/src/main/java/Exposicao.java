@@ -46,7 +46,7 @@ public class Exposicao implements Comparable<Exposicao>  {
     }
 
     public List<Quadro> getListaQuadros() {
-        return listaQuadros;
+        return new ArrayList<>(listaQuadros);
     }
 
     public void setListaQuadros(List<Quadro> listaQuadros) {
@@ -82,7 +82,6 @@ public class Exposicao implements Comparable<Exposicao>  {
 
     @Override
     public String toString() {
-
         return "Exposicao{" +
                 "designacao='" + designacao + '\'' +
                 ", anoExposicao=" + anoExposicao +
