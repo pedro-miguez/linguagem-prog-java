@@ -1,11 +1,9 @@
 public class Player {
     private int currentPoints;
-    private int maxPoints;
     private int playerID;
     private boolean winner;
 
-    public Player (int playerID, int maxPoints) {
-        setMaxPoints(maxPoints);
+    public Player (int playerID) {
         setPlayerID(playerID);
         setCurrentPoints(0);
         setWinner(false);
@@ -27,14 +25,6 @@ public class Player {
         this.currentPoints = currentPoints;
     }
 
-    public int getMaxPoints() {
-        return maxPoints;
-    }
-
-    public void setMaxPoints(int maxPoints) {
-        this.maxPoints = maxPoints;
-    }
-
     public int getPlayerID() {
         return playerID;
     }
@@ -43,7 +33,4 @@ public class Player {
         this.playerID = playerID;
     }
 
-    public boolean checkVictory() {
-        return currentPoints == maxPoints;
-    }
 }
