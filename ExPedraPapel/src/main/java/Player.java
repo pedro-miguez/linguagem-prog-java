@@ -33,4 +33,8 @@ public class Player {
         this.playerID = playerID;
     }
 
+    public void addPoint() {
+        setCurrentPoints(getCurrentPoints() + 1);
+    }
+
 }

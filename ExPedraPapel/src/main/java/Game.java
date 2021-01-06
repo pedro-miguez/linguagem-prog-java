@@ -36,24 +36,52 @@ public class Game {
         this.playerTwo = playerTwo;
     }
 
+    public boolean checkVictor (Player player) {
+        return player.getCurrentPoints() == getMaxPoints();
+    }
+
     public void runGame() {
-        while (playerOne.getCurrentPoints() < maxPoints && playerTwo.getCurrentPoints() < maxPoints) {
+        System.out.println("Let's Play 'Rock, Paper, Scissor'!!! Points to win: " + getMaxPoints());
+
+        while (!checkVictor(playerOne) && !checkVictor(playerTwo)) {
+
             Signals playerOneChoice = chooseSignal(playerOne);
             Signals playerTwoChoice = chooseSignal(playerTwo);
 
             switch (playerOneChoice.interactionResult(playerTwoChoice)) {
                 case 0:
+                    System.out.println("Nobody wins a point: " + playerOneChoice + " + " + playerTwoChoice + " = DRAW");
+                    System.out.println("Current score is: " + playerOne.getCurrentPoints() + " - " + playerTwo.getCurrentPoints());
+                    break;
                 case 1:
+                    System.out.println("Player one wins a point: " + playerOneChoice + " + " + playerTwoChoice +
+                            " = " + playerOneChoice + " wins!");
+                    playerOne.addPoint();
+                    System.out.println("Current score is: " + playerOne.getCurrentPoints() + " - " + playerTwo.getCurrentPoints());
+                    break;
                 case 2:
+                    System.out.println("Player two wins a point: " + playerOneChoice + " + " + playerTwoChoice +
+                            " = " + playerTwoChoice + " wins!");
+                    playerTwo.addPoint();
+                    System.out.println("Current score is: " + playerOne.getCurrentPoints() + " - " + playerTwo.getCurrentPoints());
+                    break;
             }
+        }
 
+        if (checkVictor(playerOne)) {
+            System.out.print("Player One Wins!");
+        } else {
+            System.out.print("Player Two Wins!");
         }
     }
 
     public Signals chooseSignal (Player player) {
         Scanner scn = new Scanner(System.in);
         System.out.println("Player " + player.getPlayerID() + "(1 - Rock | 2 - Paper | 3 - Scissor): ");
-        int answer = scn.nextInt();
+        int answer;
+        do {
+            answer = scn.nextInt();
+        } while (answer < 1 || answer > 3);
 
         switch (answer) {
             case 1:
@@ -63,8 +91,7 @@ public class Game {
             case 3:
                 return Signals.SCISSOR;
             default:
-                System.out.println("Só são validos valores entre 1 e 3");
-                chooseSignal(player);
+                throw new IllegalArgumentException("Invalid input");
         }
     }
 }
