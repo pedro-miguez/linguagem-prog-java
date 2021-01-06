@@ -77,7 +77,7 @@ public class Game {
 
     public Signals chooseSignal (Player player) {
         Scanner scn = new Scanner(System.in);
-        System.out.println("Player " + player.getPlayerID() + "(1 - Rock | 2 - Paper | 3 - Scissor): ");
+        System.out.println("Player " + player.getPlayerID() + " (1 - Rock | 2 - Paper | 3 - Scissor): ");
         int answer;
         do {
             answer = scn.nextInt();
