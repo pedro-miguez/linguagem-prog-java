@@ -27,8 +27,7 @@ public class TestePessoa {
         do {
             try {
                 System.out.print("Nº de ID Civil:");
-                int idCivil = ler.nextInt();
-                ler.nextLine();
+                int idCivil = Integer.parseInt(ler.nextLine());
                 p.setIDCivil(idCivil);
                 invalid = false;
             } catch (IllegalArgumentException | InputMismatchException e) {

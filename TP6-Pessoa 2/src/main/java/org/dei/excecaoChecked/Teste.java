@@ -2,6 +2,7 @@
 package org.dei.excecaoChecked;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Formatter;
 import java.util.List;
@@ -10,7 +11,7 @@ import java.io.IOException;
 
 public class Teste {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
 
         List<Pessoa> lista = new ArrayList<>();
 
@@ -22,7 +23,7 @@ public class Teste {
 
     }
 
-    private static boolean guardarEmFicheiro(List<Pessoa> lista)  {
+    private static boolean guardarEmFicheiro(List<Pessoa> lista) throws FileNotFoundException {
         Formatter ficheiro;
         ficheiro = new Formatter(new File("pessoas.txt"));
         for (Pessoa p : lista) {
