@@ -112,7 +112,7 @@ public class Pessoa implements Comparable<Pessoa> {
      *
      * @param idCivil o novo número ID Civil do cartão do cidadão da pessoa.
      */
-    public void setIDCivil(int idCivil) throws IllegalArgumentException {
+    public void setIDCivil(int idCivil) throws IllegalArgumentException, ArgumentoForaDosLimitesException {
         if (idCivil <= 0) {
             throw new IllegalArgumentException(idCivil + " é menor ou igual a zero");
         }
@@ -122,7 +122,7 @@ public class Pessoa implements Comparable<Pessoa> {
             counter++;
         }
         if (counter > 8) {
-            throw new IllegalArgumentException(idCivil + " tem mais de 8 digitos");
+            throw new ArgumentoForaDosLimitesException(idCivil + " tem mais de 8 digitos");
         }
         this.idCivil = idCivil;
     }
