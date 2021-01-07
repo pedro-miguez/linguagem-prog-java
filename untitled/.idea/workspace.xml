@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="77f8ce47-8d3b-4866-a2ad-19c42a9e59f9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../ExCartas/ExCartas.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExCartas/src/main/java/Card.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExCartas/src/main/java/CardType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExCartas/src/main/java/CardValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExCartas/src/main/java/Deck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExCartas/src/main/java/DeckType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExCartas/src/main/java/Hand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExCartas/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExPedraPapel/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ExPedraPapel/src/main/java/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExPedraPapel/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ExPedraPapel/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExPedraPapel/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ExPedraPapel/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExPedraPapel/src/main/java/Signals.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ExPedraPapel/src/main/java/Signals.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1mhlm7QaDYkYePBH0VpL4DQ3cdn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="77f8ce47-8d3b-4866-a2ad-19c42a9e59f9" name="Default Changelist" comment="" />
+      <created>1609953862167</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609953862167</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="221" y="89" key="SettingsEditor" timestamp="1610010619842">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1610010619842" />
+  </component>
+</project>
