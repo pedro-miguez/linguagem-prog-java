@@ -36,9 +36,9 @@ public class Pessoa implements Comparable<Pessoa> {
      * @param nome o nome da pessoa.
      * @param idCivil o número ID Civil do cartão do cidadão.
      */
-    public Pessoa(String nome, int idCivil) {
-        this.nome = nome;
-        this.idCivil = idCivil;
+    public Pessoa(String nome, int idCivil) throws IllegalArgumentException {
+        setNome(nome);
+        setIDCivil(idCivil);
     }
 
     /**
@@ -84,13 +84,26 @@ public class Pessoa implements Comparable<Pessoa> {
      *
      * @param nome o novo nome da pessoa.
      */
-    public void setNome(String nome) {
+    public void setNome(String nome) throws IllegalArgumentException {
+        if (nome.length() <= 0) {
+            throw new IllegalArgumentException("Nome vazio");
+        }
+
         char c;
+        int letterCounter = 0;
         for (int i = 0; i < nome.length(); i++) {
             c = nome.charAt(i);
+            if (Character.isLetter(c)) {
+                letterCounter++;
+            }
             if (!Character.isLetter(c) && !Character.isSpaceChar(c))
                 throw new IllegalArgumentException("O " + nome + " tem caracteres que não são letras");
         }
+
+        if (letterCounter == 0) {
+            throw new IllegalArgumentException("O nome está vazio");
+        }
+
         this.nome = nome;
     }
 
@@ -99,13 +112,18 @@ public class Pessoa implements Comparable<Pessoa> {
      *
      * @param idCivil o novo número ID Civil do cartão do cidadão da pessoa.
      */
-    public void setIDCivil(int idCivil) {
+    public void setIDCivil(int idCivil) throws IllegalArgumentException {
+        if (idCivil <= 0) {
+            throw new IllegalArgumentException(idCivil + " é menor ou igual a zero");
+        }
+
         int counter = 0;
         for (int i = 0; i < Integer.toString(idCivil).length(); i++) {
             counter++;
         }
-        if (counter > 8)
+        if (counter > 8) {
             throw new IllegalArgumentException(idCivil + " tem mais de 8 digitos");
+        }
         this.idCivil = idCivil;
     }
 
