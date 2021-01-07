@@ -6,7 +6,7 @@ public class Player {
         setPlayerID(playerID);
         setCurrentPoints(0);
     }
-    
+
     public int getCurrentPoints() {
         return currentPoints;
     }

@@ -49,23 +49,21 @@ public class Game {
             Signals playerTwoChoice = chooseSignal(playerTwo);
 
             switch (playerOneChoice.interactionResult(playerTwoChoice)) {
-                case 0:
+                case 0 -> {
                     System.out.println("Nobody wins a point: " + playerOneChoice + " + " + playerTwoChoice + " = DRAW");
-                    System.out.println("Current score is: " + playerOne.getCurrentPoints() + " - " + playerTwo.getCurrentPoints());
-                    break;
-                case 1:
+                }
+                case 1 -> {
                     System.out.println("Player one wins a point: " + playerOneChoice + " + " + playerTwoChoice +
                             " = " + playerOneChoice + " wins!");
                     playerOne.addPoint();
-                    System.out.println("Current score is: " + playerOne.getCurrentPoints() + " - " + playerTwo.getCurrentPoints());
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     System.out.println("Player two wins a point: " + playerOneChoice + " + " + playerTwoChoice +
                             " = " + playerTwoChoice + " wins!");
                     playerTwo.addPoint();
-                    System.out.println("Current score is: " + playerOne.getCurrentPoints() + " - " + playerTwo.getCurrentPoints());
-                    break;
+                }
             }
+            System.out.println("Current score is: " + playerOne.getCurrentPoints() + " - " + playerTwo.getCurrentPoints());
         }
 
         if (checkVictor(playerOne)) {
