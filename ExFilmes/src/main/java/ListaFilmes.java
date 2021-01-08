@@ -11,12 +11,17 @@ public class ListaFilmes {
         this.setIdentificador(identificador);
     }
 
+    public ListaFilmes(String identificador) throws IdentificadorInvalidoException {
+        this.setIdentificador(identificador);
+        this.setListaDeFilmes(new ArrayList<>());
+    }
+
     public List<Filme> getListaDeFilmes() {
-        return new ArrayList<Filme>(listaDeFilmes);
+        return new ArrayList<>(listaDeFilmes);
     }
 
     public void setListaDeFilmes(List<Filme> listaDeFilmes) {
-        this.listaDeFilmes = new ArrayList<Filme>(listaDeFilmes);
+        this.listaDeFilmes = new ArrayList<>(listaDeFilmes);
     }
 
     public String getIdentificador() {
