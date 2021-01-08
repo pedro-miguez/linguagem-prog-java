@@ -6,7 +6,7 @@ public class ListaFilmes {
     private List<Filme> listaDeFilmes;
     private String identificador;
 
-    public ListaFilmes(List<Filme> listaDeFilmes, String identificador) {
+    public ListaFilmes(List<Filme> listaDeFilmes, String identificador) throws IdentificadorInvalidoException {
         this.setListaDeFilmes(listaDeFilmes);
         this.setIdentificador(identificador);
     }
@@ -23,7 +23,12 @@ public class ListaFilmes {
         return identificador;
     }
 
-    public void setIdentificador(String identificador) {
+    public void setIdentificador(String identificador) throws IdentificadorInvalidoException {
+        char c = identificador.charAt(0);
+
+        if (!Character.isUpperCase(c)) {
+            throw new IdentificadorInvalidoException("Identificador tem de comecar com uma letra maiuscula: " + identificador);
+        }
         this.identificador = identificador;
     }
 }
