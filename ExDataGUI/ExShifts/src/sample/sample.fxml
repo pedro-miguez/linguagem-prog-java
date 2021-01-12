@@ -11,7 +11,7 @@
 <?import javafx.scene.control.Label?>
 
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="166.0" prefWidth="422.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="205.0" prefWidth="437.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <top>
       <GridPane BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -32,10 +32,10 @@
               </rowConstraints>
                <children>
                   <Label prefHeight="17.0" prefWidth="153.0" text="Quantidade de Letras [3, 7]:" GridPane.halignment="RIGHT" />
-                  <TextArea maxWidth="50.0" prefHeight="30.0" prefWidth="8.0" GridPane.columnIndex="1" />
+                  <TextArea fx:id="numText" maxWidth="50.0" prefHeight="30.0" prefWidth="8.0" GridPane.columnIndex="1" />
                </children>
             </GridPane>
-            <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="83.0" text="Confirmar" GridPane.columnIndex="1" />
+            <Button fx:id="btnConfirm" mnemonicParsing="false" onAction="#btnConfirmClick" prefHeight="33.0" prefWidth="83.0" text="Confirmar" GridPane.columnIndex="1" />
          </children>
          <padding>
             <Insets top="10.0" />
@@ -43,7 +43,7 @@
       </GridPane>
    </top>
    <center>
-      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="213.0" text="A B C" BorderPane.alignment="CENTER">
+      <Label fx:id="letrasLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="213.0" text="A B C" BorderPane.alignment="CENTER">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
@@ -55,26 +55,26 @@
          </font>
       </Label>
    </center>
-   <right>
-      <Pane prefHeight="126.0" prefWidth="86.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="41.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="61.0" text="&gt;&gt;">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Button>
-         </children>
-      </Pane>
-   </right>
    <left>
-      <Pane prefHeight="126.0" prefWidth="86.0" BorderPane.alignment="TOP_RIGHT">
+      <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="127.0" prefWidth="110.0" BorderPane.alignment="CENTER">
          <children>
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="41.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="61.0" text="&lt;&lt;">
+            <Button fx:id="btnLeft" mnemonicParsing="false" onAction="#btnLeftClick" prefHeight="46.0" prefWidth="75.0" text="&lt;&lt;">
                <font>
-                  <Font name="System Bold" size="18.0" />
+                  <Font size="25.0" />
                </font>
             </Button>
          </children>
-      </Pane>
+      </FlowPane>
    </left>
+   <right>
+      <FlowPane alignment="CENTER" prefHeight="127.0" prefWidth="110.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnRight" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnRightClick" prefHeight="46.0" prefWidth="75.0" text="&gt;&gt;">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+         </children>
+      </FlowPane>
+   </right>
 </BorderPane>
