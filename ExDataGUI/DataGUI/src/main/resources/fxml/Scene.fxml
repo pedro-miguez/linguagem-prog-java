@@ -8,7 +8,6 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="365.0" prefWidth="560.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.upskill.datagui.SceneController">
    <top>
       <GridPane prefHeight="133.0" prefWidth="600.0" BorderPane.alignment="CENTER">
@@ -54,7 +53,7 @@
       </GridPane>
    </top>
    <center>
-      <Label prefHeight="18.0" prefWidth="148.0" BorderPane.alignment="CENTER">
+      <Label fx:id="dataExtensoLbl" prefHeight="31.0" prefWidth="236.0" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets />
          </BorderPane.margin>
