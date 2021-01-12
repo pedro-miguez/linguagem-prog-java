@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <bottom>
+      <FlowPane alignment="CENTER" columnHalignment="CENTER" hgap="10.0" prefHeight="93.0" prefWidth="354.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnConverter" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#actionConverter" text="Converter" textAlignment="CENTER">
+               <opaqueInsets>
+                  <Insets right="10.0" />
+               </opaqueInsets>
+            </Button>
+            <Button fx:id="btnLimpar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#actionLimpar" text="Limpar" textAlignment="CENTER" />
+            <Button fx:id="btnSair" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#actionSair" text="Sair" textAlignment="CENTER" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </FlowPane>
+   </bottom>
+   <top>
+      <GridPane hgap="5.0" prefHeight="183.0" prefWidth="374.0" vgap="10.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Celsius:" />
+            <Label text="Fahrenheit:" textAlignment="RIGHT" GridPane.rowIndex="1" />
+            <TextField fx:id="txtCelcius" maxWidth="100.0" GridPane.columnIndex="1" />
+            <TextField fx:id="txtFahrenheit" disable="true" maxWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" />
+         </padding>
+      </GridPane>
+   </top>
+</BorderPane>
