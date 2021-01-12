@@ -70,6 +70,9 @@ public class SceneController implements Initializable {
                     dataExtensoLbl.setText(d1.toString());
                 } else if (event.getSource() == btnDiaSemana) {
                     txtDiaSemana.setText(d1.diaDaSemana());
+                } else if (event.getSource() == txtData) {
+                    dataExtensoLbl.setText(d1.toString());
+                    txtDiaSemana.setText(d1.diaDaSemana());
                 }
             } else {
                 Alert alert1 = new Alert(Alert.AlertType.ERROR);
@@ -93,5 +96,9 @@ public class SceneController implements Initializable {
         if (data.length() != 10) {
             return false;
         } else return data.split("/").length == 3;
+    }
+
+    public void showAllDatas(ActionEvent actionEvent) {
+        validarCriarData(txtData.getText(), actionEvent);
     }
 }
