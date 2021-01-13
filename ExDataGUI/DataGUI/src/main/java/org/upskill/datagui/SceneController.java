@@ -31,8 +31,7 @@ public class SceneController implements Initializable {
     public TextField txtDiaSemana;
     public TextField txtData;
     public Label dataExtensoLbl;
-
-
+    
     /**
      * Initializes the controller class.
      */

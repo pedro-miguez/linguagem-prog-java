@@ -10,7 +10,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="248.0" prefWidth="529.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="205.0" prefWidth="437.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <top>
       <GridPane BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -31,7 +31,7 @@
               </rowConstraints>
                <children>
                   <Label prefHeight="17.0" prefWidth="153.0" text="Quantidade de Letras [3, 7]:" GridPane.halignment="RIGHT" />
-                  <TextArea fx:id="numText" maxWidth="50.0" minHeight="0.0" minWidth="50.0" prefHeight="0.0" prefWidth="50.0" GridPane.columnIndex="1" />
+                  <TextArea fx:id="numText" maxWidth="50.0" prefHeight="30.0" prefWidth="8.0" text="3" GridPane.columnIndex="1" />
                </children>
             </GridPane>
             <Button fx:id="btnConfirm" mnemonicParsing="false" onAction="#btnConfirmClick" prefHeight="33.0" prefWidth="83.0" text="Confirmar" GridPane.columnIndex="1" />
@@ -42,10 +42,13 @@
       </GridPane>
    </top>
    <center>
-      <Label fx:id="letrasLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="98.0" prefWidth="344.0" text="A B C" BorderPane.alignment="CENTER">
+      <Label fx:id="letrasLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="213.0" text="A B C" BorderPane.alignment="CENTER">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
          <font>
             <Font size="46.0" />
          </font>
