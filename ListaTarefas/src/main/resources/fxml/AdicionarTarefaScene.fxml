@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.upskill.listatarefas.ui.AdicionarTarefaSceneController">
+   <bottom>
+      <FlowPane alignment="CENTER" hgap="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnCriarTarefa" defaultButton="true" mnemonicParsing="false" onAction="#criarTarefaAction" />
+            <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#cancelarAction" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" top="15.0" />
+         </padding>
+      </FlowPane>
+   </bottom>
+   <center>
+      <GridPane hgap="5.0" vgap="10.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" />
+          <ColumnConstraints hgrow="SOMETIMES" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="lblTarefa" GridPane.halignment="RIGHT" />
+            <Label fx:id="lblPrioridade" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtTarefa" GridPane.columnIndex="1" />
+            <ComboBox fx:id="cmbPrioridade" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </GridPane>
+   </center>
+   <padding>
+      <Insets right="10.0" />
+   </padding>
+</BorderPane>

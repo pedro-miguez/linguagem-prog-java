@@ -1,0 +1,38 @@
+package org.upskill.listatarefas.model;
+
+import javax.management.InstanceAlreadyExistsException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListaTarefas {
+
+
+    public enum ORDENACAO {INSERCAO, PRIORIDADE}
+    
+    private List<Tarefa> listaTarefas;
+
+    //implementar todas as funcionalidades necessárias
+
+    public ListaTarefas() {
+        this.listaTarefas = new ArrayList<Tarefa>();
+    }
+
+    public boolean addTarefa(Tarefa t) throws InstanceAlreadyExistsException {
+        if (listaTarefas.contains(t)) {
+            throw new InstanceAlreadyExistsException("Já existe uma data criada neste instante com esta descrição!");
+        } else {
+            return listaTarefas.add(t);
+        }
+    }
+
+    public void clearTarefas() {
+        for (Tarefa t : this.listaTarefas) {
+            listaTarefas.remove(t);
+        }
+    }
+
+    public List<Tarefa> getListaTarefas() {
+        return new ArrayList<>(listaTarefas);
+    }
+    
+}
