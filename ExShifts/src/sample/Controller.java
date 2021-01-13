@@ -2,6 +2,7 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
@@ -54,15 +55,35 @@ public class Controller implements Initializable {
 
     public void criarArray() {
         StringBuilder output = new StringBuilder();
-        qntLetras = Integer.parseInt(numText.getText());
-        letrasEscolhidas = new char[qntLetras];
 
-        for (int i = 0; i < qntLetras; i++) {
-            letrasEscolhidas[i] = letras[i];
-            output.append(letrasEscolhidas[i]).append(" ");
+        try {
+            qntLetras = Integer.parseInt(numText.getText());
+            if (qntLetras < 3 || qntLetras > 7) {
+                Alert alert1 = new Alert(Alert.AlertType.ERROR);
+                alert1.setTitle("Erro");
+                alert1.setHeaderText("Deve ser introduzido um valor entre 3 e 7!");
+                alert1.showAndWait();
+                numText.clear();
+                numText.requestFocus();
+            } else {
+                letrasEscolhidas = new char[qntLetras];
+
+                for (int i = 0; i < qntLetras; i++) {
+                    letrasEscolhidas[i] = letras[i];
+                    output.append(letrasEscolhidas[i]).append(" ");
+                }
+
+                letrasLabel.setText(String.valueOf(output));
+            }
+        } catch (NumberFormatException e) {
+            Alert alert1 = new Alert(Alert.AlertType.ERROR);
+            alert1.setTitle("Erro");
+            alert1.setHeaderText("Deve ser introduzido um valor inteiro!");
+            alert1.showAndWait();
+            numText.clear();
+            numText.requestFocus();
         }
 
-        letrasLabel.setText(String.valueOf(output));
     }
 
     public void criarArrayInicial() {
