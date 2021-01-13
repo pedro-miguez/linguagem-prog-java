@@ -34,5 +34,18 @@ public class ListaTarefas {
     public List<Tarefa> getListaTarefas() {
         return new ArrayList<>(listaTarefas);
     }
+
+    public boolean clearUltimaTarefa() {
+        if (isEmpty()) {
+            return false;
+        } else {
+            listaTarefas.remove(listaTarefas.size()-1);
+            return true;
+        }
+    }
+
+    public boolean isEmpty() {
+        return listaTarefas.size() == 0;
+    }
     
 }
