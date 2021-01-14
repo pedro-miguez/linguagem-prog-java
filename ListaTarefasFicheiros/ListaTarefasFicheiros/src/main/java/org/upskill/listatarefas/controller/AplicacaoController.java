@@ -2,11 +2,6 @@ package org.upskill.listatarefas.controller;
 
 import org.upskill.listatarefas.model.ListaTarefas;
 import org.upskill.listatarefas.model.Prioridade;
-import org.upskill.listatarefas.model.Tarefa;
-
-import javax.management.InstanceAlreadyExistsException;
-import java.util.Collections;
-import java.util.List;
 
 public class AplicacaoController {
 
@@ -14,41 +9,41 @@ public class AplicacaoController {
 
     //inicia atributos
     public AplicacaoController() {
-        lista = new ListaTarefas();
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     //adiciona uma nova tarefa na lista
-    public boolean adicionarTarefa(String descricao, Prioridade prioridade) throws InstanceAlreadyExistsException {
-        return lista.addTarefa(new Tarefa(descricao, prioridade));
+    public boolean adicionarTarefa(String descricao, Prioridade prioridade) {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     //elimina de lista todas as tarefas
     public void eliminarTarefas() {
-        lista.clearTarefas();
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     //elimina apenas a última tarefa inserida na lista
     public boolean eliminarUltimaTarefa() {
-        return lista.clearUltimaTarefa();
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     //verifica se lista está ou não vazia
     public boolean listaVazia() {
-        return lista.isEmpty();
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     //retorna os elementos da lista, por ordem de inserção
     public String getListaTarefas() {
-        return lista.listaTarefasPorInsercao();
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     //retorna os elementos da lista, por decrescente de prioridade
     public String getListaTarefasPorPrioridade() {
-        return lista.listaTarefasPorPrioridade();
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     //retorna um array com todos os valores de Prioridade
     public Prioridade[] getPrioridades() {
-        return Prioridade.values();
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }

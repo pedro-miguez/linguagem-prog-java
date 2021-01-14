@@ -8,12 +8,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.upskill.listatarefas.ui.AdicionarTarefaUI">
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.AdicionarTarefaSceneController">
    <bottom>
       <FlowPane alignment="CENTER" hgap="20.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btnCriarTarefa" defaultButton="true" mnemonicParsing="false" onAction="#criarTarefaAction" text="Adicionar" />
-            <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#cancelarAction" text="Cancelar" />
+            <Button fx:id="btnCriarTarefa" defaultButton="true" mnemonicParsing="false" onAction="#criarTarefaAction" />
+            <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#cancelarAction" />
          </children>
          <padding>
             <Insets bottom="5.0" top="15.0" />
@@ -37,8 +37,8 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <TextField fx:id="txtTarefa" promptText="Descrição da Tarefa" GridPane.columnIndex="1" />
-            <ComboBox fx:id="cmbPrioridade" promptText="Prioridade da Tarefa" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtTarefa" GridPane.columnIndex="1" />
+            <ComboBox fx:id="cmbPrioridade" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
          <padding>
             <Insets bottom="10.0" top="10.0" />

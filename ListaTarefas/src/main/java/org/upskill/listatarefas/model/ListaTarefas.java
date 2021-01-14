@@ -2,6 +2,7 @@ package org.upskill.listatarefas.model;
 
 import javax.management.InstanceAlreadyExistsException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ListaTarefas {
@@ -46,6 +47,32 @@ public class ListaTarefas {
 
     public boolean isEmpty() {
         return listaTarefas.size() == 0;
+    }
+
+    @Override
+    public String toString() {
+        return  listaTarefasPorInsercao();
+    }
+
+    public String listaTarefasPorInsercao() {
+        List<Tarefa> listaCopia = getListaTarefas();
+
+        StringBuilder output = new StringBuilder();
+        for (Tarefa t : listaCopia) {
+            output.append(t).append("\n");
+        }
+        return String.valueOf(output);
+    }
+
+    public String listaTarefasPorPrioridade() {
+        List<Tarefa> listaSortPrioridade = getListaTarefas();
+        Collections.sort(listaSortPrioridade);
+
+        StringBuilder output = new StringBuilder();
+        for (Tarefa t : listaSortPrioridade) {
+            output.append(t).append("\n");
+        }
+        return String.valueOf(output);
     }
     
 }
