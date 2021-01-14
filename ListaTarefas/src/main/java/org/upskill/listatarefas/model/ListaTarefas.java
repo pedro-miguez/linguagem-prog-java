@@ -1,11 +1,12 @@
 package org.upskill.listatarefas.model;
 
 import javax.management.InstanceAlreadyExistsException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class ListaTarefas {
+public class ListaTarefas implements Serializable {
 
 
     public enum ORDENACAO {INSERCAO, PRIORIDADE}
@@ -26,6 +27,12 @@ public class ListaTarefas {
         }
     }
 
+    public boolean addTarefa(String descricao, Prioridade prioridade) throws InstanceAlreadyExistsException {
+        Tarefa tarefa = new Tarefa(descricao, prioridade);
+
+        return addTarefa(tarefa);
+    }
+
     public void clearTarefas() {
         for (Tarefa t : this.listaTarefas) {
             listaTarefas.remove(t);
@@ -34,6 +41,17 @@ public class ListaTarefas {
 
     public List<Tarefa> getListaTarefas() {
         return new ArrayList<>(listaTarefas);
+    }
+
+    public String[] getListaComoArray() {
+        String[] listaTarefasString = new String[getListaTarefas().size()];
+        int i = 0;
+
+        for (Tarefa tarefa : listaTarefas) {
+            listaTarefasString[i++] = tarefa.toString();
+        }
+
+        return listaTarefasString;
     }
 
     public boolean clearUltimaTarefa() {

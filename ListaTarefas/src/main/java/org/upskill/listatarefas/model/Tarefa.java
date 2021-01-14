@@ -9,10 +9,20 @@ public class Tarefa implements Comparable<Tarefa> {
     private LocalDateTime instante;
     private Prioridade prioridade;
 
+    private static final DateTimeFormatter formatoInstante = DateTimeFormatter.ofPattern("dd/MM/yyyy_HH:mm:ss.SSS");
+
+    private static final char SEPARADOR = '-';
+
     public Tarefa(String descricao, Prioridade prioridade) {
         setDescricao(descricao);
         setPrioridade(prioridade);
         instante = LocalDateTime.now();
+    }
+
+    public Tarefa(String descricao, Prioridade prioridade, CharSequence instante) {
+        setDescricao(descricao);
+        setPrioridade(prioridade);
+        this.instante = LocalDateTime.parse(instante, formatoInstante);
     }
 
     public String getDescricao() {
@@ -43,12 +53,12 @@ public class Tarefa implements Comparable<Tarefa> {
 
     @Override
     public String toString() {
-        DateTimeFormatter formatoInstante = 
-                DateTimeFormatter.ofPattern("dd/MM/yyyy HH:MM:SS.SSS");
         String stringDataTempoDeRegisto = instante.format(formatoInstante);
-        return String.format("%s - %s - %s", descricao, prioridade, 
+        return String.format("%s %c %s %c %s", descricao, SEPARADOR, prioridade, SEPARADOR,
                 stringDataTempoDeRegisto);
     }
+
+
 
     @Override
     public int compareTo(Tarefa outraTarefa) {
@@ -66,6 +76,24 @@ public class Tarefa implements Comparable<Tarefa> {
         Tarefa tarefa = (Tarefa) o;
         return getDescricao().equals(tarefa.getDescricao()) &&
                 getInstante().equals(tarefa.getInstante());
+    }
+
+    public static String[] getTarefaComoArray(String tarefa) {
+        String[] dados = tarefa.trim().split(String.valueOf(SEPARADOR));
+        int nrAtributos = 3;
+
+        if (dados.length == nrAtributos) {
+            try {
+                new Tarefa(dados[0], Prioridade.valueOf(dados[1].toUpperCase().trim()), dados[2].trim());
+
+                return dados;
+            }
+            catch(Exception ex) {
+                throw new RuntimeException("Dados Inválidos da Tarefa");
+            }
+        }
+
+        throw new RuntimeException("Dados Inválidos da Tarefa");
     }
 
 }
