@@ -13,6 +13,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyCombination;
@@ -23,6 +24,8 @@ import org.upskill.listatarefas.controller.AplicacaoController;
 
 public class JanelaPrincipalUI implements Initializable {
 
+    public MenuItem menuItemAdicionarTarefas;
+    public MenuItem menuItemLimparTarefas;
     private AplicacaoController appController;
     private Stage adicionarTarefaUIStage;
 
