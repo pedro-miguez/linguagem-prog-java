@@ -50,8 +50,8 @@ public class AdicionarTarefaUI implements Initializable {
             boolean added = appController.adicionarTarefa(txtTarefa.getText(), cmbPrioridade.getValue());
 
             if (added) {
-                janelaPrincipalUI.atualizarTextAreaListaTarefas();
-                janelaPrincipalUI.getBtnLimparTarefas().setDisable(false);
+                janelaPrincipalUI.atualizarListViewListaTarefas();
+                janelaPrincipalUI.getRemoverMenuItem().setDisable(false);
             }
             AlertaUI.criarAlerta(Alert.AlertType.INFORMATION, MainApp.TITULO_APLICACAO, "Adicionar Tarefa.",
                     added ? "Tarefa adicionada com sucesso."

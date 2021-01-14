@@ -5,36 +5,37 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.sun.tools.javac.util.Context;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import org.upskill.listatarefas.controller.AplicacaoController;
+import org.upskill.listatarefas.model.Tarefa;
 
 public class JanelaPrincipalUI implements Initializable {
 
     public MenuItem menuItemAdicionarTarefas;
     public MenuItem menuItemLimparTarefas;
+    public MenuItem guardarTextoMenuItem;
+    public MenuItem serializarMenuItem;
+    private Menu removerMenuItem;
+
+    @FXML
+    private ListView<Tarefa> listViewTarefas;
+    private ObservableList<Tarefa> obsListTarefas;
     private AplicacaoController appController;
     private Stage adicionarTarefaUIStage;
 
-    @FXML
-    private Button btnAdicionarTarefas;
-    @FXML
-    private Button btnLimparTarefas;
-    @FXML
-    private TextArea txtAreaTarefas;
 
     /**
      * Initializes the controller class.
@@ -53,7 +54,12 @@ public class JanelaPrincipalUI implements Initializable {
             adicionarTarefaUIStage.setResizable(false);
             adicionarTarefaUIStage.setScene(scene);
 
+
+
+
             appController = new AplicacaoController();
+            obsListTarefas = FXCollections.observableArrayList(appController.getListaTarefas());
+            listViewTarefas = new ListView<Tarefa>(obsListTarefas);
 
             AdicionarTarefaUI adicionarTarefaUI = loader.getController();
             adicionarTarefaUI.associarParentUI(this);
@@ -72,16 +78,15 @@ public class JanelaPrincipalUI implements Initializable {
         adicionarTarefaUIStage.show();
     }
 
-    public void atualizarTextAreaListaTarefas(){
-        txtAreaTarefas.setText(appController.getListaTarefas());
+    public void atualizarListViewListaTarefas(){
+        listViewTarefas.refresh();
     }
 
 
 
     @FXML
     private void limparTarefasAction(ActionEvent event) {
-        getBtnLimparTarefas().setDisable(true);
-        txtAreaTarefas.clear();
+        getRemoverMenuItem().setDisable(true);
         getAplicacaoController().eliminarTarefas();
 
     }
@@ -92,19 +97,32 @@ public class JanelaPrincipalUI implements Initializable {
             switch (event.getCode()){
                 case Z:
                     appController.eliminarUltimaTarefa();
-                    atualizarTextAreaListaTarefas();
+                    atualizarListViewListaTarefas();
                     break;
                 case O:
-                    atualizarTextAreaListaTarefas();
+                    obsListTarefas = (ObservableList<Tarefa>) appController.getListaTarefas();
                     break;
                 case P:
-                    txtAreaTarefas.setText(appController.getListaTarefasPorPrioridade());
+                    obsListTarefas = (ObservableList<Tarefa>) appController.getListaTarefasPorPrioridade();
                     break;
             }
         }
     }
 
-    public Button getBtnLimparTarefas() {
-        return btnLimparTarefas;
+
+    public void guardarTextoAction(ActionEvent actionEvent) {
+    }
+
+    public void serializarAction(ActionEvent actionEvent) {
+    }
+
+    public void desserializarAction(ActionEvent actionEvent) {
+    }
+
+    public void sairAction(ActionEvent actionEvent) {
+    }
+
+    public Menu getRemoverMenuItem() {
+        return removerMenuItem;
     }
 }

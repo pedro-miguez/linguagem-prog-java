@@ -92,7 +92,6 @@ public class Tarefa implements Comparable<Tarefa> {
                 throw new RuntimeException("Dados Inválidos da Tarefa");
             }
         }
-
         throw new RuntimeException("Dados Inválidos da Tarefa");
     }
 

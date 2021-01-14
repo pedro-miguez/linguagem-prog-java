@@ -33,6 +33,18 @@ public class ListaTarefas implements Serializable {
         return addTarefa(tarefa);
     }
 
+    public int adicionarListaTarefas(ListaTarefas outraListaTarefas) throws InstanceAlreadyExistsException {
+        int totalContactosAdicionados = 0;
+
+        for (Tarefa tarefa : outraListaTarefas.getListaTarefas()) {
+            boolean tarefaAdicionada = addTarefa(tarefa);
+            if (tarefaAdicionada) {
+                totalContactosAdicionados++;
+            }
+        }
+        return totalContactosAdicionados;
+    }
+
     public void clearTarefas() {
         for (Tarefa t : this.listaTarefas) {
             listaTarefas.remove(t);
@@ -82,7 +94,7 @@ public class ListaTarefas implements Serializable {
         return String.valueOf(output);
     }
 
-    public String listaTarefasPorPrioridade() {
+   /* public String listaTarefasPorPrioridade() {
         List<Tarefa> listaSortPrioridade = getListaTarefas();
         Collections.sort(listaSortPrioridade);
 
@@ -91,6 +103,13 @@ public class ListaTarefas implements Serializable {
             output.append(t).append("\n");
         }
         return String.valueOf(output);
+    }*/
+
+    public List<Tarefa> listaTarefasPorPrioridade() {
+        List<Tarefa> listaSortPrioridade = getListaTarefas();
+        Collections.sort(listaSortPrioridade);
+
+        return listaSortPrioridade;
     }
     
 }

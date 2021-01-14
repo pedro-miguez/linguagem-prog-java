@@ -1,20 +1,52 @@
 package org.upskill.listatarefas.controller;
 
+import org.upskill.listatarefas.model.FicheiroListaTarefas;
 import org.upskill.listatarefas.model.ListaTarefas;
 import org.upskill.listatarefas.model.Prioridade;
 import org.upskill.listatarefas.model.Tarefa;
 
 import javax.management.InstanceAlreadyExistsException;
-import java.util.Collections;
+import java.io.File;
 import java.util.List;
 
 public class AplicacaoController {
 
     private ListaTarefas lista;
+    private FicheiroListaTarefas ficheiroListaTarefas;
 
     //inicia atributos
     public AplicacaoController() {
-        lista = new ListaTarefas();
+        ficheiroListaTarefas = new FicheiroListaTarefas();
+
+        desserializar();
+    }
+
+    public boolean serializar() {
+        return ficheiroListaTarefas.serializar(lista);
+    }
+
+    public boolean serializar (File ficheiroExportar) {
+        return ficheiroListaTarefas.serializar(ficheiroExportar, lista);
+    }
+
+    public void desserializar() {
+        lista = ficheiroListaTarefas.desserializar();
+    }
+
+    public int desserializar(File ficheiroImportar) throws InstanceAlreadyExistsException {
+        ListaTarefas listaTarefasImportada = ficheiroListaTarefas.desserializar(ficheiroImportar);
+
+        return lista.adicionarListaTarefas(listaTarefasImportada);
+    }
+
+    public boolean exportarTexto(File ficheiroExportar) {
+        return ficheiroListaTarefas.exportarTexto(ficheiroExportar, lista);
+    }
+
+    public int importarTexto(File ficheiroImportar) throws InstanceAlreadyExistsException {
+        ListaTarefas listaTarefasImportada = ficheiroListaTarefas.importarTexto(ficheiroImportar);
+
+        return lista.adicionarListaTarefas(listaTarefasImportada);
     }
 
     //adiciona uma nova tarefa na lista
@@ -38,14 +70,15 @@ public class AplicacaoController {
     }
 
     //retorna os elementos da lista, por ordem de inserção
-    public String getListaTarefas() {
-        return lista.listaTarefasPorInsercao();
+    public List<Tarefa> getListaTarefas() {
+        return lista.getListaTarefas();
     }
 
     //retorna os elementos da lista, por decrescente de prioridade
-    public String getListaTarefasPorPrioridade() {
+    public List<Tarefa> getListaTarefasPorPrioridade() {
         return lista.listaTarefasPorPrioridade();
     }
+
 
     //retorna um array com todos os valores de Prioridade
     public Prioridade[] getPrioridades() {

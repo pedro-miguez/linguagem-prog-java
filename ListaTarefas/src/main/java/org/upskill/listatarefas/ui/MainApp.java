@@ -11,6 +11,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import org.upskill.listatarefas.controller.AplicacaoController;
 
 import java.io.IOException;
 
@@ -21,8 +22,8 @@ public class MainApp extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         try {
-
-            Parent root = FXMLLoader.load(getClass().getResource("/fxml/JanelaPrincipalScene.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/JanelaPrincipalScene.fxml"));
+            Parent root = loader.load();
 
             Scene scene = new Scene(root);
             scene.getStylesheets().add("/styles/Styles.css");
@@ -41,6 +42,12 @@ public class MainApp extends Application {
 
                     if (alerta.showAndWait().get() == ButtonType.CANCEL) {
                         event.consume();
+                    } else {
+                        AplicacaoController appController = ((JanelaPrincipalUI) loader.getController()).getAplicacaoController();
+                        if (!appController.listaVazia() && !appController.serializar()) {
+                            AlertaUI.criarAlerta(Alert.AlertType.ERROR, TITULO_APLICACAO, "Exportar Lista.",
+                                    "Problema a exportar a lista de contactos!").show();
+                        }
                     }
                 }
             });
