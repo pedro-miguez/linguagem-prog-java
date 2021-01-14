@@ -27,8 +27,8 @@ public class ListaTarefas implements Serializable {
         }
     }
 
-    public boolean addTarefa(String descricao, Prioridade prioridade) throws InstanceAlreadyExistsException {
-        Tarefa tarefa = new Tarefa(descricao, prioridade);
+    public boolean addTarefa(String descricao, Prioridade prioridade, CharSequence instante) throws InstanceAlreadyExistsException {
+        Tarefa tarefa = new Tarefa(descricao, prioridade, instante);
 
         return addTarefa(tarefa);
     }
