@@ -13,6 +13,10 @@ public class ClubeDesportivo implements Serializable {
     private static final String NOME_OMISSAO = "Sem nome";
     private static final String DATA_OMISSAO = "Sem data de fundação";
 
+    private static final int ATLETA = 1;
+    private static final int ATLETA_NAO_PROFISSIONAL = 2;
+
+
 
     public ClubeDesportivo(String nomeClube, String dataFundacao, ArrayList<Atleta> atletasInscritos ) {
         this.setNomeClube(nomeClube);
@@ -48,6 +52,39 @@ public class ClubeDesportivo implements Serializable {
 
     public ArrayList<Atleta> getAtletasInscritos() {
         return atletasInscritos;
+    }
+
+    public ArrayList<Atleta> getListaAtletasDadoTipo (ArrayList<Atleta> atletasInscritos, TipoAtleta tipoAtleta) {
+        if (tipoAtleta == TipoAtleta.ATLETA) {
+            return this.getAtletasInscritos();
+        }
+        ArrayList<Atleta> atletasDadoTipo = new ArrayList<>();
+        for(Atleta a : atletasInscritos) {
+            switch (tipoAtleta) {
+                case AMADOR:
+                    if (a instanceof AtletaAmador ) {
+                        atletasDadoTipo.add(a);
+                    }
+                    break;
+                case PROFISSIONAL:
+                    if (a instanceof AtletaProfissional ) {
+                        atletasDadoTipo.add(a);
+                    }
+                    break;
+                case NAO_PROFISSIONAL:
+                    if (a instanceof AtletaNaoProfissional ) {
+                        atletasDadoTipo.add(a);
+                    }
+                    break;
+                case SEMIPROFISSIONAL:
+                    if (a instanceof AtletaSemiProfissional ) {
+                        atletasDadoTipo.add(a);
+                    }
+                    break;
+            }
+        }
+
+        return atletasDadoTipo;
     }
 
     public ArrayList<Atleta> getSortedByName() {

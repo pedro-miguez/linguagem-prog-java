@@ -23,9 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="414fe973-53da-4d0a-99ce-8bfa3afcf61d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Java1_AndreAguiar_PedroMiguez.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java1_AndreAguiar_PedroMiguez.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/FicheirosAtleta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/TipoAtleta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/ClubeDesportivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/ClubeDesportivo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,19 +38,19 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Enum" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.1\plugins\maven\lib\maven3" />
       </MavenGeneralSettings>
     </option>
   </component>
