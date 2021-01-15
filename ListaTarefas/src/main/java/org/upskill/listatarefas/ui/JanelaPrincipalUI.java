@@ -5,18 +5,15 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import com.sun.tools.javac.util.Context;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyCombination;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.*;
 import org.upskill.listatarefas.controller.AplicacaoController;
@@ -70,13 +67,6 @@ public class JanelaPrincipalUI implements Initializable {
 
             appController = new AplicacaoController();
             atualizarListViewListaTarefas();
-            if (appController.listaVazia()) {
-                removerMenuItem.setDisable(true);
-                /*guardarTextoMenuItem.setDisable(true);
-                serializarMenuItem.setDisable(true);*/
-            }
-            //obsListTarefas = FXCollections.observableArrayList(appController.getListaTarefas());
-
 
 
             AdicionarTarefaUI adicionarTarefaUI = loader.getController();
@@ -247,5 +237,14 @@ public class JanelaPrincipalUI implements Initializable {
             AlertaUI.criarAlerta(Alert.AlertType.ERROR, MainApp.TITULO_APLICACAO, CABECALHO_EXPORTAR,
                     "Não foi seleccionado nenhum ficheiro!").show();
         }
+    }
+
+    public void abrirMenuTarefaAction(Event actionEvent) {
+        removerMenuItem.setDisable(appController.listaVazia());
+    }
+
+    public void abrirMenuFicheirosAction(Event actionEvent) {
+        guardarTextoMenuItem.setDisable(appController.listaVazia());
+        serializarMenuItem.setDisable(appController.listaVazia());
     }
 }
