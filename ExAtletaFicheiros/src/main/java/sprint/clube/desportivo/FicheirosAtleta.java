@@ -44,6 +44,26 @@ public class FicheirosAtleta {
         return serializar(NOME_FICHEIRO_ATLETA_PRO, cd, TipoAtleta.PROFISSIONAL);
     }
 
+    public ArrayList<Atleta> desserializarTodos() {
+        return desserializar(NOME_FICHEIRO_ATLETA);
+    }
+
+    public ArrayList<Atleta> desserializarAtletaAmador() {
+        return desserializar(NOME_FICHEIRO_ATLETA_AMADOR);
+    }
+
+    public ArrayList<Atleta> desserializarAtletaNaoProfissional() {
+        return desserializar(NOME_FICHEIRO_ATLETA_NPRO);
+    }
+
+    public ArrayList<Atleta> desserializarAtletaSemiProfissional() {
+        return desserializar(NOME_FICHEIRO_ATLETA_SEMIPRO);
+    }
+
+    public ArrayList<Atleta> desserializarAtletaProfissional() {
+        return desserializar(NOME_FICHEIRO_ATLETA_PRO);
+    }
+
     public boolean exportarTextoTodos(ClubeDesportivo cd) {
         return exportarTexto(new File(NOME_FICHEIRO_ATLETA_TEXTO), cd, TipoAtleta.ATLETA);
     }
@@ -64,28 +84,32 @@ public class FicheirosAtleta {
         return exportarTexto(new File(NOME_FICHEIRO_ATLETA_PRO_TEXTO), cd, TipoAtleta.PROFISSIONAL);
     }
 
-    public boolean importarTextoAtletaProfissional(ClubeDesportivo cd) {
-        return exportarTexto(new File(NOME_FICHEIRO_ATLETA_PRO_TEXTO), cd, TipoAtleta.PROFISSIONAL);
+    public ArrayList<Atleta> importarTextoAtletaProfissional() {
+        return importarTexto(new File(NOME_FICHEIRO_ATLETA_PRO_TEXTO));
     }
 
-    public boolean importarTextoTodos(ClubeDesportivo cd) {
-        return exportarTexto(new File(NOME_FICHEIRO_ATLETA_TEXTO), cd, TipoAtleta.ATLETA);
+    public ArrayList<Atleta> importarTextoTodos() {
+        return importarTexto(new File(NOME_FICHEIRO_ATLETA_TEXTO));
     }
 
-    public boolean importarTextoAtletaAmador(ClubeDesportivo cd) {
-        return exportarTexto(new File(NOME_FICHEIRO_ATLETA_AMADOR_TEXTO), cd, TipoAtleta.AMADOR);
+    public ArrayList<Atleta> importarTextoAtletaAmador() {
+        return importarTexto(new File(NOME_FICHEIRO_ATLETA_AMADOR_TEXTO));
     }
 
-    public boolean importarTextoAtletaNaoProfissional(ClubeDesportivo cd) {
-        return exportarTexto(new File(NOME_FICHEIRO_ATLETA_NPRO_TEXTO), cd, TipoAtleta.NAO_PROFISSIONAL);
+    public ArrayList<Atleta> importarTextoAtletaNaoProfissional() {
+        return importarTexto(new File(NOME_FICHEIRO_ATLETA_NPRO_TEXTO));
     }
 
-    public boolean importarTextoAtletaSemiProfissional(ClubeDesportivo cd) {
-        return exportarTexto(new File(NOME_FICHEIRO_ATLETA_SEMIPRO_TEXTO), cd, TipoAtleta.SEMIPROFISSIONAL);
+    public ArrayList<Atleta> importarTextoAtletaSemiProfissional() {
+        return importarTexto(new File(NOME_FICHEIRO_ATLETA_SEMIPRO_TEXTO));
     }
-    
+
     public boolean serializar(String nomeFicheiro, ClubeDesportivo cd, TipoAtleta tipoAtleta) {
         return serializar (new File(nomeFicheiro), cd, tipoAtleta);
+    }
+
+    public ArrayList<Atleta> desserializar(String nomeFicheiro) {
+        return desserializar(new File(nomeFicheiro));
     }
 
     public boolean serializar(File ficheiro, ClubeDesportivo cd, TipoAtleta tipoAtleta) {
@@ -102,6 +126,25 @@ public class FicheirosAtleta {
             return false;
         }
     }
+
+    public ArrayList<Atleta> desserializar(File ficheiro) {
+        ArrayList<Atleta> listaAtletas;
+        try {
+            ObjectInputStream in = new ObjectInputStream(
+                    new FileInputStream(ficheiro));
+            try {
+                listaAtletas = (ArrayList<Atleta>) in.readObject();
+
+                return listaAtletas;
+            } finally {
+                in.close();
+            }
+        } catch (IOException | ClassNotFoundException ex) {
+            return new ArrayList<>();
+        }
+    }
+
+
 
     public boolean exportarTexto(File ficheiro, ClubeDesportivo cd, TipoAtleta tipoAtleta) {
         try {
@@ -134,21 +177,21 @@ public class FicheirosAtleta {
                     switch (linha.split(String.valueOf(Atleta.SEPARADOR))[0]) {
                         case "AtletaAmador":
                             String []dados = AtletaAmador.getAtletaComoArray(linha);
-                            lista.add(new AtletaAmador(dados[0], Integer.parseInt(dados[1]), Integer.parseInt(dados[2]), Double.parseDouble(dados[3]),
-                                    Double.parseDouble(dados[4]), Genero.valueOf(dados[5].toUpperCase()),
-                                    Atividade.valueOf(dados[6].toUpperCase()), ObjectivoTreino.valueOf(dados[7].toUpperCase()), Integer.parseInt(dados[8])));
+                            lista.add(new AtletaAmador(dados[1], Integer.parseInt(dados[2]), Integer.parseInt(dados[3]), Double.parseDouble(dados[4]),
+                                    Double.parseDouble(dados[5]), Genero.valueOf(dados[6].toUpperCase()),
+                                    Atividade.valueOf(dados[7].toUpperCase()), ObjectivoTreino.valueOf(dados[8].toUpperCase()), Integer.parseInt(dados[9])));
                             break;
                         case "AtletaProfissional":
                             dados = AtletaProfissional.getAtletaComoArray(linha);
-                            lista.add(new AtletaProfissional(dados[0], Integer.parseInt(dados[1]), Integer.parseInt(dados[2]), Double.parseDouble(dados[3]),
-                                    Double.parseDouble(dados[4]), Genero.valueOf(dados[5].toUpperCase()),
-                                    Atividade.valueOf(dados[6].toUpperCase()), ObjectivoTreino.valueOf(dados[7].toUpperCase()), Double.parseDouble(dados[8])));
+                            lista.add(new AtletaProfissional(dados[1], Integer.parseInt(dados[2]), Integer.parseInt(dados[3]), Double.parseDouble(dados[4]),
+                                    Double.parseDouble(dados[5]), Genero.valueOf(dados[6].toUpperCase()),
+                                    Atividade.valueOf(dados[7].toUpperCase()), ObjectivoTreino.valueOf(dados[8].toUpperCase()), Double.parseDouble(dados[9])));
                             break;
                         case "AtletaSemiProfissional":
                             dados = AtletaSemiProfissional.getAtletaComoArray(linha);
-                            lista.add(new AtletaSemiProfissional(dados[0], Integer.parseInt(dados[1]), Integer.parseInt(dados[2]), Double.parseDouble(dados[3]),
-                                    Double.parseDouble(dados[4]), Genero.valueOf(dados[5].toUpperCase()),
-                                    Atividade.valueOf(dados[6].toUpperCase()), ObjectivoTreino.valueOf(dados[7].toUpperCase()), Integer.parseInt(dados[8])));
+                            lista.add(new AtletaSemiProfissional(dados[1], Integer.parseInt(dados[2]), Integer.parseInt(dados[3]), Double.parseDouble(dados[4]),
+                                    Double.parseDouble(dados[5]), Genero.valueOf(dados[6].toUpperCase()),
+                                    Atividade.valueOf(dados[7].toUpperCase()), ObjectivoTreino.valueOf(dados[8].toUpperCase()), Integer.parseInt(dados[9])));
                             break;
                     }
                 }

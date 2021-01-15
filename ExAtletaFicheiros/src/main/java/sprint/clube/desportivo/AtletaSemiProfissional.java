@@ -47,13 +47,13 @@ public class AtletaSemiProfissional extends AtletaNaoProfissional implements Ser
 
     public static String[] getAtletaComoArray(String atleta) {
         String[] dados = atleta.trim().split(String.valueOf(SEPARADOR));
-        int nrAtributos = 9;
+        int nrAtributos = 10;
 
         if (dados.length == nrAtributos) {
             try {
-                new AtletaSemiProfissional(dados[0], Integer.parseInt(dados[1]), Integer.parseInt(dados[2]), Double.parseDouble(dados[3]),
-                        Double.parseDouble(dados[4]), Genero.valueOf(dados[5].toUpperCase()),
-                        Atividade.valueOf(dados[6].toUpperCase()), ObjectivoTreino.valueOf(dados[7].toUpperCase()), Integer.parseInt(dados[8]));
+                new AtletaSemiProfissional(dados[1], Integer.parseInt(dados[2]), Integer.parseInt(dados[3]), Double.parseDouble(dados[4]),
+                        Double.parseDouble(dados[5]), Genero.valueOf(dados[6].toUpperCase()),
+                        Atividade.valueOf(dados[7].toUpperCase()), ObjectivoTreino.valueOf(dados[8].toUpperCase()), Integer.parseInt(dados[9]));
 
                 return dados;
             }

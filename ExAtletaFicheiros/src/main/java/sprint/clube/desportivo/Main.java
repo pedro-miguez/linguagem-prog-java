@@ -5,10 +5,15 @@ import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
-        //Criação do clube desportivo
-        ClubeDesportivo cb1 = new ClubeDesportivo("Vigorosa", "30-5-1965", new ArrayList<Atleta>());
 
-        //Criação de 3 instâncias de Atleta Amador
+        FicheirosAtleta ficheiro = new FicheirosAtleta();
+
+        //Criação do clube desportivo
+        ClubeDesportivo cb1 = new ClubeDesportivo("Vigorosa", "30-5-1965", ficheiro.desserializarTodos());
+
+        cb1.addListaAtletas(ficheiro.importarTextoTodos());
+
+       /* //Criação de 3 instâncias de Atleta Amador
         AtletaAmador aa1 = new AtletaAmador("Joana", 123, 20, 51, 250,
                 Genero.FEMININO, Atividade.CICLISMO, ObjectivoTreino.CAPACIDADE_CARDIORESPIRATORIA, 10);
         AtletaAmador aa2 = new AtletaAmador("Andrade", 1234, 50, 60, 99,
@@ -30,8 +35,8 @@ public class Main {
         AtletaSemiProfissional asp2 = new AtletaSemiProfissional("Rodrigo", 2, 44, 44, 221,
                 Genero.MASCULINO, Atividade.CICLISMO, ObjectivoTreino.CAPACIDADE_CARDIORESPIRATORIA, 2);
         AtletaSemiProfissional asp3 = new AtletaSemiProfissional("Maria", 3, 31, 50, 198,
-                Genero.FEMININO, Atividade.NATACAO, ObjectivoTreino.CAPACIDADE_CARDIORESPIRATORIA, 21);
-
+                Genero.FEMININO, Atividade.NATACAO, ObjectivoTreino.CAPACIDADE_CARDIORESPIRATORIA, 21);*/
+/*
         //Armazenamento das instâncias criadas no Clube Desportivo
         cb1.addAtleta(aa1);
         cb1.addAtleta(aa2);
@@ -41,15 +46,21 @@ public class Main {
         cb1.addAtleta(ap3);
         cb1.addAtleta(asp1);
         cb1.addAtleta(asp2);
-        cb1.addAtleta(asp3);
-
-        FicheirosAtleta ficheiro = new FicheirosAtleta();
+        cb1.addAtleta(asp3);*/
 
         ficheiro.exportarTextoAtletaSemiProfissional(cb1);
+        ficheiro.exportarTextoAtletaAmador(cb1);
         ficheiro.serializarAtletaProfissional(cb1);
         ficheiro.serializarAtletaAmador(cb1);
 
+
+
+        cb1.addListaAtletas(ficheiro.importarTextoAtletaAmador());
+
+        System.out.println(cb1.getAtletasInscritos());
+
         ficheiro.serializarTodos(cb1);
+
     }
 
     public static void printArrayList(ArrayList<Atleta> arrayList) {

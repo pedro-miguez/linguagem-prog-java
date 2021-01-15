@@ -45,8 +45,19 @@ public class ClubeDesportivo implements Serializable {
         this.dataFundacao = dataFundacao;
     }
 
-    public void addAtleta (Atleta a) {
-        getAtletasInscritos().add(a);
+    public boolean addAtleta (Atleta a) {
+        if (getAtletasInscritos().contains(a)) {
+            return false;
+        } else {
+            return getAtletasInscritos().add(a);
+        }
+
+    }
+
+    public void addListaAtletas(ArrayList<Atleta> lista) {
+        for (Atleta a : lista) {
+            addAtleta(a);
+        }
     }
 
 

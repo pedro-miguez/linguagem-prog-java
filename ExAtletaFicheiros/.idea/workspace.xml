@@ -24,15 +24,16 @@
   <component name="ChangeListManager">
     <list default="true" id="414fe973-53da-4d0a-99ce-8bfa3afcf61d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/Atleta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/Atleta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ficheiro Lista Atletas Amadores.ser" beforeDir="false" afterPath="$PROJECT_DIR$/Ficheiro Lista Atletas Amadores.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ficheiro Lista Atletas Profissionais.ser" beforeDir="false" afterPath="$PROJECT_DIR$/Ficheiro Lista Atletas Profissionais.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ficheiro Lista Atletas Semi-Profissionais.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Ficheiro Lista Atletas Semi-Profissionais.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ficheiro Lista Atletas.ser" beforeDir="false" afterPath="$PROJECT_DIR$/Ficheiro Lista Atletas.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/AtletaAmador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/AtletaAmador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/AtletaNaoProfissional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/AtletaNaoProfissional.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/AtletaProfissional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/AtletaProfissional.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/AtletaSemiProfissional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/AtletaSemiProfissional.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/ClubeDesportivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/ClubeDesportivo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/FicheirosAtleta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/FicheirosAtleta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ListaTarefas/src/main/java/org/upskill/listatarefas/model/Tarefa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ListaTarefas/src/main/java/org/upskill/listatarefas/model/Tarefa.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,25 +188,25 @@
     </state>
     <state x="740" y="237" key="FileChooserDialogImpl/0.0.1920.1040/-1024.306.1024.728@0.0.1920.1040" timestamp="1606353682013" />
     <state x="740" y="237" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1609839862401" />
-    <state width="1877" height="116" key="GridCell.Tab.0.bottom" timestamp="1610723960304">
+    <state width="1877" height="116" key="GridCell.Tab.0.bottom" timestamp="1610730688735">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="116" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1024.113.1024.728@0.0.1920.1040" timestamp="1610723960304" />
+    <state width="1877" height="116" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1024.113.1024.728@0.0.1920.1040" timestamp="1610730688735" />
     <state width="1877" height="116" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1024.306.1024.728@0.0.1920.1040" timestamp="1606480168831" />
-    <state width="1877" height="116" key="GridCell.Tab.0.center" timestamp="1610723960304">
+    <state width="1877" height="116" key="GridCell.Tab.0.center" timestamp="1610730688734">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="116" key="GridCell.Tab.0.center/0.0.1920.1040/-1024.113.1024.728@0.0.1920.1040" timestamp="1610723960304" />
+    <state width="1877" height="116" key="GridCell.Tab.0.center/0.0.1920.1040/-1024.113.1024.728@0.0.1920.1040" timestamp="1610730688734" />
     <state width="1877" height="116" key="GridCell.Tab.0.center/0.0.1920.1040/-1024.306.1024.728@0.0.1920.1040" timestamp="1606480168831" />
-    <state width="1877" height="116" key="GridCell.Tab.0.left" timestamp="1610723960304">
+    <state width="1877" height="116" key="GridCell.Tab.0.left" timestamp="1610730688734">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="116" key="GridCell.Tab.0.left/0.0.1920.1040/-1024.113.1024.728@0.0.1920.1040" timestamp="1610723960304" />
+    <state width="1877" height="116" key="GridCell.Tab.0.left/0.0.1920.1040/-1024.113.1024.728@0.0.1920.1040" timestamp="1610730688734" />
     <state width="1877" height="116" key="GridCell.Tab.0.left/0.0.1920.1040/-1024.306.1024.728@0.0.1920.1040" timestamp="1606480168831" />
-    <state width="1877" height="116" key="GridCell.Tab.0.right" timestamp="1610723960304">
+    <state width="1877" height="116" key="GridCell.Tab.0.right" timestamp="1610730688735">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="116" key="GridCell.Tab.0.right/0.0.1920.1040/-1024.113.1024.728@0.0.1920.1040" timestamp="1610723960304" />
+    <state width="1877" height="116" key="GridCell.Tab.0.right/0.0.1920.1040/-1024.113.1024.728@0.0.1920.1040" timestamp="1610730688735" />
     <state width="1877" height="116" key="GridCell.Tab.0.right/0.0.1920.1040/-1024.306.1024.728@0.0.1920.1040" timestamp="1606480168831" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1606303851554">
       <screen x="0" y="0" width="1920" height="1040" />
