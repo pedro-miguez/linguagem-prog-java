@@ -21,6 +21,7 @@
           <Menu mnemonicParsing="false" text="Ficheiros">
             <items>
               <MenuItem fx:id="guardarTextoMenuItem" mnemonicParsing="false" onAction="#guardarTextoAction" text="Guardar como texto" />
+                  <MenuItem fx:id="importarTextoMenuItem" mnemonicParsing="false" onAction="#importarTextoAction" text="Importar ficheiro texto" />
                   <MenuItem fx:id="serializarMenuItem" mnemonicParsing="false" onAction="#serializarAction" text="Serialização" />
                   <MenuItem mnemonicParsing="false" onAction="#desserializarAction" text="Desserialização" />
                   <MenuItem mnemonicParsing="false" onAction="#sairAction" text="Sair" />

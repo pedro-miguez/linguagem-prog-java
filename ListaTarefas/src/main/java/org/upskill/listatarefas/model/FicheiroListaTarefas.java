@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class FicheiroListaTarefas {
 
-    public static final String NOME_FICHEIRO_SERIALIZAR = "ListaTarefas.ltf";
+    public static final String NOME_FICHEIRO_SERIALIZAR = "ListaTarefas.ser";
 
     public FicheiroListaTarefas() {
     }
@@ -35,13 +35,13 @@ public class FicheiroListaTarefas {
         }
     }
 
-        public ListaTarefas desserializar() {
-            return desserializar(NOME_FICHEIRO_SERIALIZAR);
-        }
+    public ListaTarefas desserializar() {
+        return desserializar(NOME_FICHEIRO_SERIALIZAR);
+    }
 
-        public ListaTarefas desserializar(String nomeFicheiro) {
-            return desserializar(new File(nomeFicheiro));
-        }
+    public ListaTarefas desserializar(String nomeFicheiro) {
+        return desserializar(new File(nomeFicheiro));
+    }
 
     public ListaTarefas desserializar(File ficheiro) {
         ListaTarefas listaTarefas;

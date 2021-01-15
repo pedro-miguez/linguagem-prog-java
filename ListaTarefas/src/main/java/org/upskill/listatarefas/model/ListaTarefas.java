@@ -46,13 +46,11 @@ public class ListaTarefas implements Serializable {
     }
 
     public void clearTarefas() {
-        for (Tarefa t : this.listaTarefas) {
-            listaTarefas.remove(t);
-        }
+        listaTarefas.clear();
     }
 
     public List<Tarefa> getListaTarefas() {
-        return new ArrayList<>(listaTarefas);
+        return listaTarefas;
     }
 
     public String[] getListaComoArray() {
@@ -106,7 +104,7 @@ public class ListaTarefas implements Serializable {
     }*/
 
     public List<Tarefa> listaTarefasPorPrioridade() {
-        List<Tarefa> listaSortPrioridade = getListaTarefas();
+        List<Tarefa> listaSortPrioridade = new ArrayList<>(getListaTarefas());
         Collections.sort(listaSortPrioridade);
 
         return listaSortPrioridade;
