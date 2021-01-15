@@ -43,89 +43,13 @@ public class Main {
         cb1.addAtleta(asp2);
         cb1.addAtleta(asp3);
 
-        //Listagem dos Atletas Amadores e SemiProfissionais: Nome, FCM, FCT
-        System.out.println("#### - Listagem dos Atletas Amadores e Semi Profissionais: Nome, FCM, FCT - ###");
-        for (Atleta a : cb1.getAtletasInscritos()) {
-            if (a instanceof AtletaSemiProfissional || a instanceof AtletaAmador) {
-                System.out.printf("Nome: %s | FCM: %.2f | FCT: %.2f %n", a.getNome(), a.freqCardMax(), a.freqCardTrabalho());
-            }
-        }
-        System.out.println();
+        FicheirosAtleta ficheiro = new FicheirosAtleta();
 
-        //Listagem: Nome e Valor a Pagar a cada atleta
-        System.out.println("#### - Listagem: Nome e Valor a Pagar a cada atleta - ###");
-        for (Atleta a : cb1.getAtletasInscritos()) {
-            System.out.printf("Nome: %s | Valor a Pagar: %.2f %n", a.getNome(), a.calcularPagamento());
+        ficheiro.exportarTextoAtletaSemiProfissional(cb1);
+        ficheiro.serializarAtletaProfissional(cb1);
+        ficheiro.serializarAtletaAmador(cb1);
 
-        }
-        System.out.println();
-
-        //Apresentação de Instâncias
-        System.out.println("#### - Numero de instancias criadas em cada classe - ###");
-        System.out.println("Instancias de Atleta Amador: " + AtletaAmador.getTotalAtletasAmador());
-        System.out.println("Instancias de Atleta Profissional: " + AtletaProfissional.getTotalAtletasProfissional());
-        System.out.println("Instancias de Atleta Semi Profissional: " + AtletaSemiProfissional.getTotalAtletasSemiProfissional());
-        System.out.println();
-
-        //Calcular e apresentar o valor total a pagar a cada tipo de atleta, e o valor total desses pagamentos
-        System.out.println("#### - Calcular e apresentar o valor total a pagar a cada tipo de atleta, " +
-                "e o valor total desses pagamentos - ###");
-        double sumAmador = 0;
-        double sumPro = 0;
-        double sumSemiPro = 0;
-        for (Atleta a : cb1.getAtletasInscritos()) {
-            if (a instanceof AtletaAmador) {
-                sumAmador += a.calcularPagamento();
-            } else if (a instanceof AtletaProfissional) {
-                sumPro += a.calcularPagamento();
-            } else {
-                sumSemiPro += a.calcularPagamento();
-            }
-        }
-        double sumTotal = sumAmador + sumPro + sumSemiPro;
-
-        System.out.printf("Valor a pagar aos Atletas Amadores: %.2f %n", sumAmador);
-        System.out.printf("Valor a pagar aos Atletas Profissionais: %.2f %n", sumPro);
-        System.out.printf("Valor a pagar aos Atletas Semi Profissionais: %.2f %n", sumSemiPro);
-        System.out.printf("Valor total a pagar: %.2f %n", sumTotal);
-        System.out.println();
-
-        //Funcionalidades da classe Clube Desportivo
-        System.out.println("#### - Funcionalidades da classe Clube Desportivo - ###");
-        System.out.println("Nome do clube: " + cb1.getNomeClube());
-        System.out.println();
-        System.out.println("#### - Adicionar um atleta: ArrayList antes de adicionar - ###");
-        printArrayList(cb1.getAtletasInscritos());
-        AtletaAmador aa4 = new AtletaAmador("Hector", 123, 55, 51, 500,
-                Genero.MASCULINO, Atividade.CICLISMO, ObjectivoTreino.CAPACIDADE_CARDIORESPIRATORIA, 12);
-        cb1.addAtleta(aa4);
-        System.out.println("#### - Adicionar um atleta: ArrayList depois de adicionar - ###");
-        printArrayList(cb1.getAtletasInscritos());
-        System.out.println();
-
-        System.out.println("#### - Ordenacao Alfabetica por nome: antes de ordenar - ###");
-        Collections.shuffle(cb1.getAtletasInscritos());
-        printArrayList(cb1.getAtletasInscritos());
-        System.out.println("#### - Ordenacao Alfabetica por nome: depois de ordenar - ###");
-        printArrayList(cb1.getSortedByName());
-        System.out.println();
-
-        System.out.println("#### - Ordenacao Inversa Por Premio: antes de ordenar - ###");
-        Collections.shuffle(cb1.getAtletasInscritos());
-        printArrayList(cb1.getAtletasInscritos());
-        System.out.println("#### - Ordenacao Inversa Por Premio: depois de ordenar - ###");
-        printArrayList(cb1.getReverseSortedByPremio());
-        System.out.println();
-
-        System.out.println("#### - Ordenacao Por Categoria, Modalidade, e Nome: antes de ordenar - ###");
-        Collections.shuffle(cb1.getAtletasInscritos());
-        printArrayList(cb1.getAtletasInscritos());
-        System.out.println("#### - Ordenacao Por Categoria, Modalidade, e Nome: depois de ordenar - ###");
-        printArrayList(cb1.getSortedByTypeThenActivityThenName());
-        System.out.println();
-
-        System.out.println("#### - Valor total a pagar para efeitos de IRS - ###");
-        System.out.printf("Valor total do IRS: %.2f", cb1.calcularValorTotalIRS(cb1.getAtletasInscritos()));
+        ficheiro.serializarTodos(cb1);
     }
 
     public static void printArrayList(ArrayList<Atleta> arrayList) {

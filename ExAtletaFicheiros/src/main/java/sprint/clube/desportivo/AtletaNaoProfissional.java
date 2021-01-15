@@ -56,4 +56,9 @@ public abstract class AtletaNaoProfissional extends Atleta implements Serializab
         return String.format("%sAntiguidade: %d || ", super.toString(), getAntiguidade());
     }
 
+    @Override
+    public String toStringFicheiroTexto() {
+        return String.format("%s%c%d", super.toStringFicheiroTexto(), SEPARADOR, getAntiguidade());
+    }
+
 }

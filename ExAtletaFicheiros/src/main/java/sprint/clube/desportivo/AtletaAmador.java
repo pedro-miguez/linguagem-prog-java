@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class AtletaAmador extends AtletaNaoProfissional implements Serializable {
 
+
     private static double percentagemMensal = 0.07;
     private static int valorMinimo = 5;
     private static int totalAtletasAmador = 0;
@@ -55,8 +56,30 @@ public class AtletaAmador extends AtletaNaoProfissional implements Serializable 
         return String.format("%s", super.toString());
     }
 
+
+    public static String[] getAtletaComoArray(String atleta) {
+        String[] dados = atleta.trim().split(String.valueOf(SEPARADOR));
+        int nrAtributos = 9;
+
+        if (dados.length == nrAtributos) {
+            try {
+                new AtletaAmador(dados[0], Integer.parseInt(dados[1]), Integer.parseInt(dados[2]), Double.parseDouble(dados[3]),
+                        Double.parseDouble(dados[4]), Genero.valueOf(dados[5].toUpperCase()),
+                        Atividade.valueOf(dados[6].toUpperCase()), ObjectivoTreino.valueOf(dados[7].toUpperCase()), Integer.parseInt(dados[8]));
+
+                return dados;
+            }
+            catch(Exception ex) {
+                throw new RuntimeException("Dados Inválidos da Tarefa");
+            }
+        }
+        throw new RuntimeException("Dados Inválidos da Tarefa");
+    }
+
     public static int getTotalAtletasAmador(){
         return totalAtletasAmador;
-    } 
+    }
+
+
 
 }

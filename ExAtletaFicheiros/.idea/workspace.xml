@@ -23,11 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="414fe973-53da-4d0a-99ce-8bfa3afcf61d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/FicheirosAtleta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/TipoAtleta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/Atleta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/Atleta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/AtletaAmador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/AtletaAmador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/AtletaNaoProfissional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/AtletaNaoProfissional.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/AtletaProfissional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/AtletaProfissional.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/AtletaSemiProfissional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/AtletaSemiProfissional.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/ClubeDesportivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/ClubeDesportivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/FicheirosAtleta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/FicheirosAtleta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ListaTarefas/src/main/java/org/upskill/listatarefas/model/Tarefa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ListaTarefas/src/main/java/org/upskill/listatarefas/model/Tarefa.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,10 +85,10 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in Java1_AndreAguiar_PedroMiguez (3)">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sprint.clube.desportivo.Main" />
-      <module name="Java1_AndreAguiar_PedroMiguez" />
+      <module name="ExAtletaFicheiros" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="sprint.clube.desportivo.*" />
@@ -128,9 +133,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.All in Java1_AndreAguiar_PedroMiguez (3)" />
         <item itemvalue="JUnit.All in Java1_AndreAguiar_PedroMiguez (2)" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.All in Java1_AndreAguiar_PedroMiguez (1)" />
         <item itemvalue="JUnit.All in Java1_AndreAguiar_PedroMiguez" />
       </list>
@@ -164,9 +169,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="#Project_Structure/0.0.1920.1040/-1024.306.1024.728@0.0.1920.1040" timestamp="1606354491529" />
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1606300436087">
+    <state x="682" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1610720615850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="682" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1024.113.1024.728@0.0.1920.1040" timestamp="1610720615850" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1610723297731">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1024.113.1024.728@0.0.1920.1040" timestamp="1610723297731" />
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1024.306.1024.728@0.0.1920.1040" timestamp="1606300436087" />
     <state x="664" y="267" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog" timestamp="1606306459491">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -177,21 +187,25 @@
     </state>
     <state x="740" y="237" key="FileChooserDialogImpl/0.0.1920.1040/-1024.306.1024.728@0.0.1920.1040" timestamp="1606353682013" />
     <state x="740" y="237" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1609839862401" />
-    <state width="1877" height="116" key="GridCell.Tab.0.bottom" timestamp="1606480168831">
+    <state width="1877" height="116" key="GridCell.Tab.0.bottom" timestamp="1610723960304">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="116" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1024.113.1024.728@0.0.1920.1040" timestamp="1610723960304" />
     <state width="1877" height="116" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1024.306.1024.728@0.0.1920.1040" timestamp="1606480168831" />
-    <state width="1877" height="116" key="GridCell.Tab.0.center" timestamp="1606480168831">
+    <state width="1877" height="116" key="GridCell.Tab.0.center" timestamp="1610723960304">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="116" key="GridCell.Tab.0.center/0.0.1920.1040/-1024.113.1024.728@0.0.1920.1040" timestamp="1610723960304" />
     <state width="1877" height="116" key="GridCell.Tab.0.center/0.0.1920.1040/-1024.306.1024.728@0.0.1920.1040" timestamp="1606480168831" />
-    <state width="1877" height="116" key="GridCell.Tab.0.left" timestamp="1606480168831">
+    <state width="1877" height="116" key="GridCell.Tab.0.left" timestamp="1610723960304">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="116" key="GridCell.Tab.0.left/0.0.1920.1040/-1024.113.1024.728@0.0.1920.1040" timestamp="1610723960304" />
     <state width="1877" height="116" key="GridCell.Tab.0.left/0.0.1920.1040/-1024.306.1024.728@0.0.1920.1040" timestamp="1606480168831" />
-    <state width="1877" height="116" key="GridCell.Tab.0.right" timestamp="1606480168831">
+    <state width="1877" height="116" key="GridCell.Tab.0.right" timestamp="1610723960304">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="116" key="GridCell.Tab.0.right/0.0.1920.1040/-1024.113.1024.728@0.0.1920.1040" timestamp="1610723960304" />
     <state width="1877" height="116" key="GridCell.Tab.0.right/0.0.1920.1040/-1024.306.1024.728@0.0.1920.1040" timestamp="1606480168831" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1606303851554">
       <screen x="0" y="0" width="1920" height="1040" />

@@ -43,8 +43,28 @@ public class AtletaSemiProfissional extends AtletaNaoProfissional implements Ser
     public String toString(){
         return String.format("%sValor de Rendimento Fixo: %.2f || ", super.toString(), getParcelaFixa());
     }
-    
-    
+
+
+    public static String[] getAtletaComoArray(String atleta) {
+        String[] dados = atleta.trim().split(String.valueOf(SEPARADOR));
+        int nrAtributos = 9;
+
+        if (dados.length == nrAtributos) {
+            try {
+                new AtletaSemiProfissional(dados[0], Integer.parseInt(dados[1]), Integer.parseInt(dados[2]), Double.parseDouble(dados[3]),
+                        Double.parseDouble(dados[4]), Genero.valueOf(dados[5].toUpperCase()),
+                        Atividade.valueOf(dados[6].toUpperCase()), ObjectivoTreino.valueOf(dados[7].toUpperCase()), Integer.parseInt(dados[8]));
+
+                return dados;
+            }
+            catch(Exception ex) {
+                throw new RuntimeException("Dados Inválidos da Tarefa");
+            }
+        }
+        throw new RuntimeException("Dados Inválidos da Tarefa");
+    }
+
+
     public static int getTotalAtletasSemiProfissional(){
         return totalAtletasSemiProfissional;
     }     

@@ -14,6 +14,7 @@ public class Tarefa implements Comparable<Tarefa>, Serializable {
 
     private static final char SEPARADOR = '-';
 
+
     public Tarefa(String descricao, Prioridade prioridade) {
         setDescricao(descricao);
         setPrioridade(prioridade);

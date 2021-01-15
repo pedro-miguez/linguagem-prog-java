@@ -84,7 +84,32 @@ public class AtletaProfissional extends Atleta implements Serializable {
     public String toString(){
         return String.format("%sValor de Rendimento Fixo: %.2f || ", super.toString(), getValorFixo());
     }
-    
+
+    @Override
+    public String toStringFicheiroTexto() {
+        return String.format("%s%c%.2f", super.toStringFicheiroTexto(), SEPARADOR, getValorFixo());
+    }
+
+
+    public static String[] getAtletaComoArray(String atleta) {
+        String[] dados = atleta.trim().split(String.valueOf(SEPARADOR));
+        int nrAtributos = 9;
+
+        if (dados.length == nrAtributos) {
+            try {
+                new AtletaProfissional(dados[0], Integer.parseInt(dados[1]), Integer.parseInt(dados[2]), Double.parseDouble(dados[3]),
+                        Double.parseDouble(dados[4]), Genero.valueOf(dados[5].toUpperCase()),
+                        Atividade.valueOf(dados[6].toUpperCase()), ObjectivoTreino.valueOf(dados[7].toUpperCase()), Double.parseDouble(dados[8]));
+
+                return dados;
+            }
+            catch(Exception ex) {
+                throw new RuntimeException("Dados Inválidos da Tarefa");
+            }
+        }
+        throw new RuntimeException("Dados Inválidos da Tarefa");
+    }
+
     public static int getTotalAtletasProfissional(){
         return totalAtletasProfissional;
     }  

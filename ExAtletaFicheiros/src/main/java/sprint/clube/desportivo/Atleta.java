@@ -35,6 +35,8 @@ public abstract class Atleta implements Comparable<Atleta>, Serializable {
     private static final Genero GENERO_OMISSAO = Genero.MASCULINO;
     private static final Atividade ATIVIDADE_OMISSAO = Atividade.CAMINHADA;
     private static final ObjectivoTreino OBJECTIVO_TREINO_OMISSAO = ObjectivoTreino.QUEIMA_GORDURA;
+
+    public static final char SEPARADOR = '-';
     
     private static final double QUEIMA_IT = 0.6;
     private static final double CARDIO_IT = 0.75;
@@ -407,6 +409,13 @@ public abstract class Atleta implements Comparable<Atleta>, Serializable {
                 + "Valor dos Premios Mensal: %.2f || "
                 + "", this.getClass().getSimpleName(), getNome(), getNumIdCivil(), getIdade(), getGenero(), getAtividade(), getObjectivoTreino(), getFreqCardRepouso(), getPremioAcumulado());
     }
+
+    public String toStringFicheiroTexto() {
+        return String.format("%s%c%s%c%d%c%d%c%.2f%c%.2f%c%s%c%s%c%s", this.getClass().getSimpleName(), SEPARADOR, nome, SEPARADOR, numIdCivil, SEPARADOR, idade, SEPARADOR,
+                freqCardRepouso, SEPARADOR, premioAcumulado, SEPARADOR, genero, SEPARADOR, atividade, SEPARADOR, objectivoTreino);
+    }
+
+
 
     /**
      * Compares this object with the specified object for order.  

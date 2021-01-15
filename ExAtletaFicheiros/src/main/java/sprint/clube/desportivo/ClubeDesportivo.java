@@ -54,12 +54,13 @@ public class ClubeDesportivo implements Serializable {
         return atletasInscritos;
     }
 
-    public ArrayList<Atleta> getListaAtletasDadoTipo (ArrayList<Atleta> atletasInscritos, TipoAtleta tipoAtleta) {
+    public ArrayList<Atleta> getListaAtletasDadoTipo (TipoAtleta tipoAtleta) {
         if (tipoAtleta == TipoAtleta.ATLETA) {
             return this.getAtletasInscritos();
         }
         ArrayList<Atleta> atletasDadoTipo = new ArrayList<>();
-        for(Atleta a : atletasInscritos) {
+
+        for(Atleta a : getAtletasInscritos()) {
             switch (tipoAtleta) {
                 case AMADOR:
                     if (a instanceof AtletaAmador ) {
@@ -86,6 +87,19 @@ public class ClubeDesportivo implements Serializable {
 
         return atletasDadoTipo;
     }
+
+    public String[] getListaAtletasComoArray(TipoAtleta tipoAtleta) {
+        String[] listaTarefasString = new String[getListaAtletasDadoTipo(tipoAtleta).size()];
+        int i = 0;
+
+        for (Atleta atleta : getListaAtletasDadoTipo(tipoAtleta)) {
+            listaTarefasString[i++] = atleta.toStringFicheiroTexto();
+        }
+
+        return listaTarefasString;
+    }
+
+
 
     public ArrayList<Atleta> getSortedByName() {
         ArrayList<Atleta> atletasOrdenados = new ArrayList<Atleta>(atletasInscritos);
