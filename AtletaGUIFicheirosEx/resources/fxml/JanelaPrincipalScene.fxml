@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="368.0" prefWidth="558.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.JanelaPrincipalUI">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" onShowing="#menuShowingAction" text="Ficheiro">
+               <items>
+                  <Menu fx:id="menuSerializar" mnemonicParsing="false" text="Serializar">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#serializarTodosFicheiro" text="Escolher Destino..." />
+                        <MenuItem mnemonicParsing="false" onAction="#serializarTodos" text="Todos" />
+                        <MenuItem mnemonicParsing="false" onAction="#serializarProfissional" text="Profissional" />
+                        <MenuItem mnemonicParsing="false" text="Semi-Profissional" />
+                        <MenuItem mnemonicParsing="false" text="Amador" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Desserializar">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#desserializarFicheiro" text="Escolher Ficheiro..." />
+                        <MenuItem mnemonicParsing="false" onAction="#desserializarTodos" text="Todos" />
+                        <MenuItem mnemonicParsing="false" onAction="#desserializarProfissional" text="Profissional" />
+                        <MenuItem mnemonicParsing="false" text="Semi-Profissional" />
+                        <MenuItem mnemonicParsing="false" text="Amador" />
+                     </items>
+                  </Menu>
+                  <Menu fx:id="menuExportarTexto" mnemonicParsing="false" text="Exportar Texto">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#exportarTextoTodosFicheiro" text="Escolher Destino..." />
+                        <MenuItem mnemonicParsing="false" onAction="#exportarTextoTodos" text="Todos" />
+                        <MenuItem mnemonicParsing="false" onAction="#exportarTextoProfissional" text="Profissional" />
+                        <MenuItem mnemonicParsing="false" text="Semi-Profissional" />
+                        <MenuItem mnemonicParsing="false" text="Amador" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Importar Texto">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#importarTextoFicheiroTodos" text="Escolher Ficheiro..." />
+                        <MenuItem mnemonicParsing="false" onAction="#importarTextoTodos" text="Todos" />
+                        <MenuItem mnemonicParsing="false" onAction="#importarTextoProfissional" text="Profissional" />
+                        <MenuItem mnemonicParsing="false" text="Semi-Profissional" />
+                        <MenuItem mnemonicParsing="false" text="Amador" />
+                     </items>
+                  </Menu>
+                  <MenuItem mnemonicParsing="false" onAction="#sairAction" text="Sair" />
+               </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <ListView fx:id="listViewAtletas" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

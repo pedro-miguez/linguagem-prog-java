@@ -1,0 +1,5 @@
+package model;
+
+public enum TipoAtleta {
+ATLETA, AMADOR, NAO_PROFISSIONAL, PROFISSIONAL, SEMIPROFISSIONAL
+}

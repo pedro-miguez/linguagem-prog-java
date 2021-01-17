@@ -23,17 +23,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="414fe973-53da-4d0a-99ce-8bfa3afcf61d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/controller/AppController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/Atividade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/Atleta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/AtletaAmador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/AtletaNaoProfissional.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/AtletaProfissional.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/AtletaSemiProfissional.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/ClubeDesportivo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/FicheirosAtleta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/Genero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/ObjectivoTreino.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/SortByPremioReversedComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/SortByTypeThenActivityThenName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/TipoAtleta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/ui/JanelaPrincipalUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/ui/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ficheiro Lista Atletas Amadores.ser" beforeDir="false" afterPath="$PROJECT_DIR$/Ficheiro Lista Atletas Amadores.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ficheiro Lista Atletas Profissionais.ser" beforeDir="false" afterPath="$PROJECT_DIR$/Ficheiro Lista Atletas Profissionais.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ficheiro Lista Atletas Semi-Profissionais.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Ficheiro Lista Atletas Semi-Profissionais.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ficheiro Lista Atletas.ser" beforeDir="false" afterPath="$PROJECT_DIR$/Ficheiro Lista Atletas.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/AtletaAmador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/AtletaAmador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/AtletaProfissional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/AtletaProfissional.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/AtletaSemiProfissional.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/AtletaSemiProfissional.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/ClubeDesportivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/ClubeDesportivo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/FicheirosAtleta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/FicheirosAtleta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sprint/clube/desportivo/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ListaTarefas/src/main/resources/styles/Styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/resources/styles/Styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,9 +82,9 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
@@ -174,6 +183,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="682" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1024.113.1024.728@0.0.1920.1040" timestamp="1610720615850" />
+    <state x="599" y="200" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1610907881014">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="599" y="200" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.0.1920.1040/-1024.113.1024.728@0.0.1920.1040" timestamp="1610907881014" />
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1610723297731">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -183,9 +196,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="664" y="267" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog/0.0.1920.1040/-1024.306.1024.728@0.0.1920.1040" timestamp="1606306459491" />
-    <state x="740" y="237" key="FileChooserDialogImpl" timestamp="1609839862401">
+    <state x="740" y="237" key="FileChooserDialogImpl" timestamp="1610907926471">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="740" y="237" key="FileChooserDialogImpl/0.0.1920.1040/-1024.113.1024.728@0.0.1920.1040" timestamp="1610907926471" />
     <state x="740" y="237" key="FileChooserDialogImpl/0.0.1920.1040/-1024.306.1024.728@0.0.1920.1040" timestamp="1606353682013" />
     <state x="740" y="237" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1609839862401" />
     <state width="1877" height="116" key="GridCell.Tab.0.bottom" timestamp="1610730688735">
@@ -228,9 +242,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="625" y="224" key="NewModule_or_Project.wizard/0.0.1920.1040/-1024.306.1024.728@0.0.1920.1040" timestamp="1606353683939" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1606354513382">
+    <state x="387" y="116" key="SettingsEditor" timestamp="1610907910754">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="387" y="116" key="SettingsEditor/0.0.1920.1040/-1024.113.1024.728@0.0.1920.1040" timestamp="1610907910754" />
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/-1024.306.1024.728@0.0.1920.1040" timestamp="1606354513382" />
     <state x="731" y="278" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1606300934583">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -240,9 +255,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="501" y="256" width="917" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040/-1024.306.1024.728@0.0.1920.1040" timestamp="1606305595921" />
-    <state x="551" y="181" key="new project wizard" timestamp="1609839872238">
+    <state x="551" y="181" key="new project wizard" timestamp="1610907972096">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="551" y="181" key="new project wizard/0.0.1920.1040/-1024.113.1024.728@0.0.1920.1040" timestamp="1610907972096" />
     <state x="551" y="181" key="new project wizard/0.0.1920.1040/-1024.306.1024.728@0.0.1920.1040" timestamp="1606297310225" />
     <state x="551" y="181" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1609839872238" />
   </component>
