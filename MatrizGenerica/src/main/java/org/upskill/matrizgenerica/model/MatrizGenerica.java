@@ -1,8 +1,12 @@
 
 package org.upskill.matrizgenerica.model;
 
+import jdk.internal.reflect.Reflection;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class MatrizGenerica<E> {
@@ -80,12 +84,20 @@ public class MatrizGenerica<E> {
         return this.matrizGenerica.get(indiceLinha).get(indiceColuna);
     }
 
-    public boolean addLine(List<? extends E> lista) {
-        if (lista.size() > this.numeroMaximoColunas) {
-            this.numeroMaximoColunas = lista.size();
+    /*public boolean addLine(Collection<? extends E> collection) {
+        if (collection.size() > this.numeroMaximoColunas) {
+            this.numeroMaximoColunas = collection.size();
         }
-        return this.matrizGenerica.add((List<E>) lista);
+        return this.matrizGenerica.add(new ArrayList<>(collection));
+    }*/
+
+    public boolean addLine(Collection<? extends E> collection) {
+        if (collection.size() > this.numeroMaximoColunas) {
+            this.numeroMaximoColunas = collection.size();
+        }
+        return this.matrizGenerica.add(new ArrayList<>(collection));
     }
+
 
     public boolean contains(E e) {
         for (List<E> list : this.matrizGenerica) {
@@ -97,6 +109,7 @@ public class MatrizGenerica<E> {
     }
 
     public boolean substituteElement(int indiceLinha, int indiceColuna, E e){
+        verificarIndices(indiceLinha, indiceColuna);
         this.matrizGenerica.get(indiceLinha).set(indiceColuna, e);
         return this.getElement(indiceLinha, indiceColuna) == e;
     }
@@ -107,8 +120,12 @@ public class MatrizGenerica<E> {
 
     @SuppressWarnings("unchecked")
     public E[] elementsOfGivenColumn(E[] array, int indiceColuna) {
+
+        verificarIndiceColuna(indiceColuna);
+
         if (array.length < this.matrizGenerica.size()) {
-            array = (E[]) new Object[this.matrizGenerica.size()];
+            array = (E[]) Array.newInstance(array.getClass().getComponentType(), this.matrizGenerica.size() );
+            //array = (E[]) new Object[this.matrizGenerica.size()];
         } else if (array.length > this.matrizGenerica.size()) {
             array[this.matrizGenerica.size()] = null;
         }
