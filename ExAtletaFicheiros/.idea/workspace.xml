@@ -23,26 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="414fe973-53da-4d0a-99ce-8bfa3afcf61d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/controller/AppController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/Atividade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/Atleta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/AtletaAmador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/AtletaNaoProfissional.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/AtletaProfissional.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/AtletaSemiProfissional.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/ClubeDesportivo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/FicheirosAtleta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/Genero.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/ObjectivoTreino.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/SortByPremioReversedComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/SortByTypeThenActivityThenName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/model/TipoAtleta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/ui/JanelaPrincipalUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/src/ui/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ListaTarefas/src/main/resources/styles/Styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../AtletaGUIFicheirosEx/resources/styles/Styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,10 +177,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="664" y="267" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog/0.0.1920.1040/-1024.306.1024.728@0.0.1920.1040" timestamp="1606306459491" />
-    <state x="740" y="237" key="FileChooserDialogImpl" timestamp="1610907926471">
+    <state x="740" y="237" key="FileChooserDialogImpl" timestamp="1610963053297">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="237" key="FileChooserDialogImpl/0.0.1920.1040/-1024.113.1024.728@0.0.1920.1040" timestamp="1610907926471" />
+    <state x="740" y="237" key="FileChooserDialogImpl/0.0.1920.1040/-1024.113.1024.728@0.0.1920.1040" timestamp="1610963053297" />
     <state x="740" y="237" key="FileChooserDialogImpl/0.0.1920.1040/-1024.306.1024.728@0.0.1920.1040" timestamp="1606353682013" />
     <state x="740" y="237" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1609839862401" />
     <state width="1877" height="116" key="GridCell.Tab.0.bottom" timestamp="1610730688735">
@@ -238,9 +219,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/-1024.306.1024.728@0.0.1920.1040" timestamp="1606303851554" />
-    <state x="625" y="224" key="NewModule_or_Project.wizard" timestamp="1606353683939">
+    <state x="625" y="224" key="NewModule_or_Project.wizard" timestamp="1610963056769">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="625" y="224" key="NewModule_or_Project.wizard/0.0.1920.1040/-1024.113.1024.728@0.0.1920.1040" timestamp="1610963056769" />
     <state x="625" y="224" key="NewModule_or_Project.wizard/0.0.1920.1040/-1024.306.1024.728@0.0.1920.1040" timestamp="1606353683939" />
     <state x="387" y="116" key="SettingsEditor" timestamp="1610907910754">
       <screen x="0" y="0" width="1920" height="1040" />
