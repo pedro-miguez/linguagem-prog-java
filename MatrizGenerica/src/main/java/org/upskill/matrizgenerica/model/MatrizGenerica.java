@@ -75,4 +75,15 @@ public class MatrizGenerica<E> {
                 + ", Tamanho: " + this.matrizGenerica.get(indice).size();
     }
 
+    public E obterElemento(int indiceLinha, int indiceColuna) {
+        return this.matrizGenerica.get(indiceLinha).get(indiceColuna);
+    }
+
+    public boolean addLinha(List<E> lista) {
+        if (lista.size() > this.numeroMaximoColunas) {
+            this.numeroMaximoColunas = lista.size();
+        }
+        return this.matrizGenerica.add(lista);
+    }
+
 }
