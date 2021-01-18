@@ -1,6 +1,7 @@
 
 package org.upskill.matrizgenerica.model;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,16 +15,16 @@ public class MatrizGenerica<E> {
         this.numeroMaximoColunas = 0;
     }
 
-    public int getNumeroDeLinhas() {
+    public int getNumberOfLines() {
         return this.matrizGenerica.size();
     }
     
-    public int getNumeroDeColunas(int indiceLinha) {
+    public int getNumberOfColumns(int indiceLinha) {
         verificarIndiceLinha(indiceLinha);
         return this.matrizGenerica.get(indiceLinha).size();
     }
 
-    public void limpar() {
+    public void clear() {
         this.matrizGenerica.clear();
     }
     
@@ -75,15 +76,50 @@ public class MatrizGenerica<E> {
                 + ", Tamanho: " + this.matrizGenerica.get(indice).size();
     }
 
-    public E obterElemento(int indiceLinha, int indiceColuna) {
+    public E getElement(int indiceLinha, int indiceColuna) {
         return this.matrizGenerica.get(indiceLinha).get(indiceColuna);
     }
 
-    public boolean addLinha(List<E> lista) {
+    public boolean addLine(List<E> lista) {
         if (lista.size() > this.numeroMaximoColunas) {
             this.numeroMaximoColunas = lista.size();
         }
         return this.matrizGenerica.add(lista);
+    }
+
+    public boolean contains(E e) {
+        for (List<E> list : this.matrizGenerica) {
+            if(list.contains(e)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean substituteElement(int indiceLinha, int indiceColuna, E e){
+        this.matrizGenerica.get(indiceLinha).set(indiceColuna, e);
+        return this.getElement(indiceLinha, indiceColuna) == e;
+    }
+
+    public boolean removeLine(int indiceLinha) {
+        return this.matrizGenerica.remove(this.matrizGenerica.get(indiceLinha));
+    }
+
+    @SuppressWarnings("unchecked")
+    public E[] elementsOfGivenColumn(E[] array, int indiceColuna) {
+        if (array.length < this.matrizGenerica.size()) {
+            array = (E[]) new Object[this.matrizGenerica.size()];
+        } else if (array.length > this.matrizGenerica.size()) {
+            array[this.matrizGenerica.size()] = null;
+        }
+
+        int i = 0;
+
+        for (List<E> linha : this.matrizGenerica) {
+            array[i++] = linha.get(indiceColuna);
+        }
+
+        return array;
     }
 
 }
