@@ -80,11 +80,11 @@ public class MatrizGenerica<E> {
         return this.matrizGenerica.get(indiceLinha).get(indiceColuna);
     }
 
-    public boolean addLine(List<E> lista) {
+    public boolean addLine(List<? extends E> lista) {
         if (lista.size() > this.numeroMaximoColunas) {
             this.numeroMaximoColunas = lista.size();
         }
-        return this.matrizGenerica.add(lista);
+        return this.matrizGenerica.add((List<E>) lista);
     }
 
     public boolean contains(E e) {
