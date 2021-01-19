@@ -1,7 +1,6 @@
 
 package org.upskill.matrizgenerica.model;
 
-import jdk.internal.reflect.Reflection;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -114,26 +113,40 @@ public class MatrizGenerica<E> {
         return this.getElement(indiceLinha, indiceColuna) == e;
     }
 
-    public boolean removeLine(int indiceLinha) {
-        return this.matrizGenerica.remove(this.matrizGenerica.get(indiceLinha));
+    public List<E> removeLine(int indiceLinha) {
+        verificarIndiceLinha(indiceLinha);
+
+        if (matrizGenerica.get(indiceLinha).size() == numeroMaximoColunas) {
+            numeroMaximoColunas = 0;
+            for (List<E> linha : matrizGenerica) {
+                if (linha.size() > numeroMaximoColunas) {
+                    numeroMaximoColunas = linha.size();
+                }
+            }
+        }
+
+        return this.matrizGenerica.remove(indiceLinha);
     }
 
     @SuppressWarnings("unchecked")
     public E[] elementsOfGivenColumn(E[] array, int indiceColuna) {
-
         verificarIndiceColuna(indiceColuna);
 
-        if (array.length < this.matrizGenerica.size()) {
-            array = (E[]) Array.newInstance(array.getClass().getComponentType(), this.matrizGenerica.size() );
-            //array = (E[]) new Object[this.matrizGenerica.size()];
-        } else if (array.length > this.matrizGenerica.size()) {
-            array[this.matrizGenerica.size()] = null;
+        int dimensaoColuna = tamanhoColuna(indiceColuna);
+
+        if (array.length < dimensaoColuna) {
+            array = (E[]) Array.newInstance(array.getClass().getComponentType(), dimensaoColuna);
+            //array = (E[]) new Object[dimensaoColuna];
+        } else if (array.length > dimensaoColuna) {
+            array[dimensaoColuna] = null;
         }
 
         int i = 0;
 
         for (List<E> linha : this.matrizGenerica) {
-            array[i++] = linha.get(indiceColuna);
+            if (linha.size()-1 >= indiceColuna) {
+                array[i++] = linha.get(indiceColuna);
+            }
         }
 
         return array;
